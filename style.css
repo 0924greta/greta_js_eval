@@ -1,3 +1,50 @@
+header {
+  display: flex; /* Utilisation du modèle flexbox */
+  justify-content: space-between; /* Sépare les éléments à gauche et à droite */
+  align-items: center; /* Si tu veux centrer verticalement le contenu */
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  max-width: 10%;
+}
+
+body {
+  margin: 5% 25%;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(211, 68%, 94%);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+p {
+  padding: 10px;
+  border-radius: 20px;
+  align-items: center;
+  font-size: 16px;
+}
+p img {
+  height: 45px;
+}
+
 .unRead {
   background-color: hsl(210, 60%, 98%);
 }

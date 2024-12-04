@@ -20,7 +20,7 @@ function allReadFunc() {
     total.innerHTML = notif + " Notifications";
   });
 }
-const allRead = document.querySelector("button");
+const allRead = document.querySelector("#delNotif");
 allRead.addEventListener("click", allReadFunc);
 for (let i = 0; i < unread.length; i++) {
   unread[i].addEventListener("click", function () {
