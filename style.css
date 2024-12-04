@@ -1,0 +1,147 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size : 16px;
+    font-weight: 500,800; /* demander ici */
+    background-color: hsl(210, 60%, 98%);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .notifications-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    color: hsl(224, 21%, 14%);
+  }
+  
+  #notification-count {
+    background-color: hsl(219, 85%, 26%);
+    border: 1px solid hsl(219, 85%, 26%);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 2px 10px;
+    
+    }
+  
+  #mark-all-read {
+    border: none;
+    background: none;
+    color: hsl(219, 14%, 63%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #mark-all-read:hover {
+    color: hsl(219, 85%, 26%);
+  }
+  
+  .notifications-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notification {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .unread.notification {
+    background-color: hsl(211, 68%, 94%);
+  }
+  
+  .readed.notification {
+    background-color: hsl(0, 0%, 100%);
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .notification-text {
+    flex: 1;
+  }
+  
+  .notification p {
+    font-size: 1rem;
+    margin: 0 0 5px;
+    line-height: 1.5;
+  }
+  
+  .notification span {
+    font-size: 0.8rem;
+    color: hsl(219, 14%, 63%);
+  }
+  
+  .message-preview {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(219, 14%, 63%);
+    border-radius: 5px;
+  }
+  
+  .message-preview:hover{
+    background-color: hsl(205, 33%, 90%);
+  }
+
+  .image-chess {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 15px;
+  }
+  
+  p {
+    color: hsl(219, 12%, 42%);
+    margin: 0;
+  }
+
+  span {
+    color: hsl(219, 14%, 63%);
+  }
+
+  strong{
+    color: hsl(224, 21%, 14%);
+  }
+
+  b {
+    color: hsl(219, 12%, 42%)
+
+  }
+  .red-point{
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  }
+  
+  .bold-blue {
+    color: hsl(219, 85%, 26%);
+  }
