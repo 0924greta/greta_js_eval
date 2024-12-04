@@ -70,3 +70,34 @@ header h1 {
 .mark-all-read:hover {
   color: var(--red);
 }
+
+/* Notifications */
+.notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: var(--light-grayish-blue-1);
+}
+
+.notification.unread {
+  border-left: 4px solid var(--blue);
+  background-color: var(--white);
+}
+
+.notification img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.notification p {
+  margin: 0;
+}
+
+.notification .time {
+  color: var(--grayish-blue);
+  font-size: 14px;
+}
