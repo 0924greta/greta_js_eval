@@ -1,0 +1,23 @@
+/* Default styles*/
+
+@font-face {
+    font-family: 'Plusjakarta sans'; 
+    src: url('assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal; /* Optionnel : bold, lighter, etc. */
+    font-style: normal; /* Optionnel : italic, oblique, etc. */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:Plusjakarta sans ;
+    max-width: 1440px;
+    padding: 25px;
+}
+
+/*Component styles */
+
+
