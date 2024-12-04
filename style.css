@@ -9,6 +9,7 @@
   box-sizing: border-box;
 }
 
+/* Variables de couleur */
 :root {
   --red: hsl(1, 90%, 64%);
   --blue: hsl(219, 85%, 26%);
@@ -21,11 +22,19 @@
   --very-dark-blue: hsl(224, 21%, 14%);
 }
 
+/* Général */
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 16px; /* Taille par défaut pour le texte */
-  line-height: 1.5; /* Bonne lisibilité */
-  color: hsl(224, 21%, 14%); /* Texte principal en bleu très foncé */
-  background-color: var(--very-light-grayish-blue); /* Couleur de fond */
-  color: var(--very-dark-blue); /* Texte principal */
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--very-dark-blue);
+  background-color: var(--very-light-grayish-blue);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
 }
