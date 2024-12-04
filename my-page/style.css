@@ -1,0 +1,83 @@
+body {
+    background-color: hsl(210, 60%, 98%);
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+p {
+    font-size: 15px;
+    line-height: 0.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: hsl(219, 12%, 42%);
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+section {
+    margin : 3% 25%;
+    width: 50%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.home {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message {
+    background-color: hsl(211, 68%, 94%);
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.private-message p {
+    line-height: 1.4;
+}
+
+.icon {
+    height: 50px;
+    margin: 15px;
+}
+
+.private-message {
+    border : 1px solid hsl(205, 33%, 90%);
+    margin-left:80px;
+}
+
+.picture{
+    margin-left: 400px;
+}
+
+.time{
+    font-weight: 100;
+    color: hsl(219, 12%, 42%);
+}
+
+button {
+    background-color: hsl(0, 0%, 100%);
+    font-size : 16px;
+    color: hsl(219, 12%, 42%);
+    height: 30px;
+    border: none;
+}
+
+button:hover{
+    color: hsl(224, 21%, 14%);
+}
