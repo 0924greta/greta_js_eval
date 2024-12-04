@@ -1,0 +1,81 @@
+/* Font import from assets */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("assets/fonts/PlusJakartaSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("assets/fonts/PlusJakartaSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+/* Remove margin & padding by default + change font family */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+}
+/* For bold content */
+.bold-text {
+  font-weight: 800 !important;
+}
+/* p content  */
+body p {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: inherit; /* Parent color */
+}
+
+/* MEDIA QUERIES */
+
+/* Mobile : 375px */
+@media (max-width: 375px) {
+  body {
+    background-color: red;
+  }
+}
+/* Desktop : 1440px */
+@media (min-width: 375px) and (max-width: 1440px) {
+  body {
+    background-color: rgb(0, 0, 255);
+  }
+}
+
+colors {
+  /* ### Primary */
+  /* red ===== For red dot */
+  color: hsl(1, 90%, 64%);
+  color: #ff253f;
+  /* blue ===== bg badge && over link*/
+  color: hsl(219, 85%, 26%);
+  color: #1c117c;
+  /* ### Neutral */
+  /* white ===== div container main*/
+  color: hsl(0, 0%, 100%);
+  color: #ffffff;
+  /* Very light grayish blue ===== Background div main*/
+  color: hsl(210, 60%, 98%);
+  color: #f7fafd;
+  /* Light grayish blue 1 ==== border p notif && border picture over && over p notif*/
+  color: hsl(211, 68%, 94%);
+  color: #e4eefb;
+  /* Light grayish blue 2*/
+  color: hsl(205, 33%, 90%);
+  color: #dbe7ee;
+  /* Grayish blue: ===== datetime notif*/
+  color: hsl(219, 14%, 63%);
+  color: #929baf;
+  /* Dark grayish blue: ===== text*/
+  color: hsl(219, 12%, 42%);
+  color: #5e6578;
+  /* Very dark blue ===== Bold black text*/
+  color: hsl(224, 21%, 14%);
+  color: #1c1e2b;
+}
