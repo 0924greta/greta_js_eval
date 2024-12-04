@@ -1,0 +1,26 @@
+
+body{   
+    font-size: 12px;
+    margin-top: 70px;
+}   
+
+img{
+height: 70px; 
+}
+
+
+.conteneur-grid{
+display:grid;
+grid-template-columns: 5fr 1fr 10fr;
+
+
+}@media (max-width: 800px){
+    .conteneur-grid{
+     grid-template-columns: 1px 70px 1fr;
+    }
+   }
+
+
+ 
+
+
