@@ -18,7 +18,7 @@
   <!-- Notifications modal  -->
 <section>
    <!-- Modals title / notifications length/ Mark all as read -->
-    <div>
+    <div class="title-counter-all-read">
       <h2>Notifications </h2>
       <!-- insert notification length in JS here -->
        <p>Mark all as read</p>
@@ -26,17 +26,17 @@
 
     <!-- Notification article 1 -->
 
-  <article class="card" >
+  <article class="card" id="card-1" >
      <!-- Avatar image -->
-    <img src="assets/images/avatar-mark-webber.webp" alt="">
+    <img src="assets/images/avatar-mark-webber.webp" alt="avatar picture">
     <!-- Username and "time since receipt" -->
-    <div class="h3-day">
-      <h3>Mark Webber</h3>
-      <p>1m ago</p>
+    <div class="user-name-timer">
+      <h3 class="user-name">Mark Webber</h3>
+      <p class="timer">1m ago</p>
     </div>
-    <!--Content of the notification and status tag read  -->
+    <!--Content of the notification and read status tag   -->
     <div class="p-mark">
-      <p> reacted to your recent post My first tournament today!</p>
+      <p class="notifications"> reacted to your recent post My first tournament today!</p>
       <!-- insert notification chip here -->
     </div>
     
@@ -44,16 +44,17 @@
 
   <!-- Notification article 2 -->
 
-  <article class="card" >
-    <img src="assets/images/avatar-angela-gray.webp" alt="">
+  <article class="card" id="card-2" >
+    <!-- Avatar image -->
+    <img src="assets/images/avatar-angela-gray.webp" alt="avatar picture">
     <!-- Username and "time since receipt" -->
-    <div>
-      <h3>Angela Gray</h3> 
-      <p>5m ago</p>
+    <div class="user-name-timer">
+      <h3 class="user-name">Angela Gray</h3> 
+      <p class="timer">5m ago</p>
     </div>
     <!--Content of the notification and status tag read  -->
     <div class="p-mark">
-      <p> followed you</p> 
+      <p class="notifications"> followed you</p> 
       <!-- insert notification chip here -->
     </div>
    
@@ -61,36 +62,38 @@
 
   <!-- Notification article 3 -->
 
-  <article class="card" >
-    <img src="assets/images/avatar-jacob-thompson.webp" alt="">
+  <article class="card" id="card-3" >
+    <!-- Avatar image -->
+    <img src="assets/images/avatar-jacob-thompson.webp" alt="avatar picture">
     <!-- Username and "time since receipt" -->
-    <div class="h3-day">
-      <h3>Jacob Thompson</h3>
-      <p>1 day ago</p>
+    <div class="user-name-timer">
+      <h3 class="user-name">Jacob Thompson</h3>
+      <p class="timer">1 day ago</p>
     </div>
     <!--Content of the notification and status tag read  -->
     <div class="p-mark">
-      <p> has joined your group Chess Club </p>
+      <p class="notifications"> has joined your group Chess Club </p>
       <!-- insert notification chip here -->
     </div>
   </article>
 
   <!-- Notification article 4 -->
 
-  <article class="card" >
-    <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="">
+  <article class="card" id="card-4" >
+    <!-- Avatar image -->
+    <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="avatar picture">
     <!-- Username and "time since receipt" -->
-    <div class="h3-day">
-      <h3>Rizky Hasanuddin</h3>
-      <p>5 day ago</p>
+    <div class="user-name-timer">
+      <h3 class="user-name">Rizky Hasanuddin</h3>
+      <p class="timer">5 day ago</p>
     </div>
     <!--Content of the notification and status tag read  -->
     <div class="p-mark">
-      <p> sent you a private message</p>
+      <p class="notifications"> sent you a private message</p>
       <!-- insert notification chip here -->
        
     </div>
-    <p>
+    <p class="message">
       Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
       I'm already having lots of fun and improving my game.
     </p>
@@ -98,50 +101,53 @@
 
   <!-- Notification article 5 -->
 
-  <article class="card" >
-    <img src="assets/images/avatar-kimberly-smith.webp" alt="">
+  <article class="card" id="card-5" >
+    <!-- Avatar image -->
+    <img src="assets/images/avatar-kimberly-smith.webp" alt="avatar picture">
     <!-- Username and "time since receipt" -->
-    <div class="h3-day">
-      <h3>Kimberly Smith</h3>
-      <p>1 week ago</p>
+    <div class="user-name-timer">
+      <h3 class="user-name">Kimberly Smith</h3>
+      <p class="timer">1 week ago</p>
     </div>
     <!--Content of the notification and status tag read  -->
     <div class="p-mark">
-      <p> commented on your picture </p>
+      <p class="notifications"> commented on your picture </p>
       <!-- insert Kimberlys picture here -->
-       <img src="assets/images/image-chess.webp" alt="">
+       <img src="assets/images/image-chess.webp" alt="" id="posted-picture">
       <!-- insert notification chip here -->
     </div>
   </article>
 
   <!-- Notification article 6 -->
 
-  <article class="card" >
-    <img src="assets/images/avatar-nathan-peterson.webp" alt="">
+  <article class="card" id="card-6" >
+    <!-- Avatar image -->
+    <img src="assets/images/avatar-nathan-peterson.webp" alt="avatar picture">
     <!-- Username and "time since receipt" -->
-    <div class="h3-day">
-      <h3>Nathan Peterson</h3>
-      <p> 2 weeks ago</p>
+    <div class="user-name-timer">
+      <h3 class="user-name">Nathan Peterson</h3>
+      <p class="timer"> 2 weeks ago</p>
     </div>
     <!--Content of the notification and status tag read  -->
     <div class="p-mark">
-      <p> reacted to your recent post 5 end-game strategies to increase your win rate</p>
+      <p class="notifications"> reacted to your recent post 5 end-game strategies to increase your win rate</p>
       <!-- insert notification chip here -->
     </div>
   </article>
 
   <!-- Notification article 7 -->
 
-  <article class="card" >
-    <img src="assets/images/avatar-anna-kim.webp" alt="">
+  <article class="card" id="card-7" >
+    <!-- Avatar image -->
+    <img src="assets/images/avatar-anna-kim.webp" alt="avatar picture">
     <!-- Username and "time since receipt" -->
-    <div class="h3-day">
-      <h3>Anna Kim</h3>
-      <p>2 weeks ago</p>
+    <div class="user-name-timer">
+      <h3 class="user-name">Anna Kim</h3>
+      <p class="timer">2 weeks ago</p>
     </div>
     <!--Content of the notification and status tag read  -->
     <div class="p-mark">
-      <p> left the group Chess Club </p>
+      <p class="notifications"> left the group Chess Club </p>
       <!-- insert notification chip here -->
     </div>
   </article>
