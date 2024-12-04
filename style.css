@@ -38,3 +38,35 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+.notification-count {
+  background: var(--blue);
+  color: var(--white);
+  padding: 3px 8px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.mark-all-read {
+  color: var(--blue);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.mark-all-read:hover {
+  color: var(--red);
+}
