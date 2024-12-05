@@ -31,6 +31,11 @@ section {
 header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
 }
 
 .not-title {
@@ -66,4 +71,57 @@ button:hover {
     font-weight: bolder;
     color: hsl(219, 85%, 26%);
     cursor: grab;
+}
+
+.not, .not-with-comment, .not-with-img {
+    background-color: hsl(210, 60%, 98%);
+    box-shadow: 1px 1px 3px hsl(205, 33%, 90%);;
+    display: grid;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.not, .not-with-comment {
+    grid-template-columns: 60px auto;
+}
+
+.not-with-img{
+    grid-template-columns: 60px auto 60px;
+}
+
+.not-img-id {
+    width: 100%;
+    height: auto;
+    grid-column: 1;
+    grid-row: 1/2;
+    margin: auto;
+}
+
+.not-main {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 20px;
+}
+
+.not-msg {
+    display: flex;
+}
+
+.not-msg p {
+    margin: 0px 10px 0px 0px;
+    color: hsl(219, 12%, 42%);
+}
+
+.not-dot {
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    margin: auto 0px auto 0px;
+    border-radius: 10px;
+}
+
+.not-time {
+    margin: 10px 10px 0px 0px;
+    color: hsl(219, 14%, 63%);
 }
