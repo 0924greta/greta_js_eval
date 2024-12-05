@@ -14,8 +14,7 @@ for (let index = 0; index < test.length; index++) {
 
 let cpt = document.querySelector(".comptr");
 cpt.innerHTML = sum;
-cpt.style.backgroundColor=colorblue2;
-
+cpt.style.backgroundColor = colorblue2;
 
 function calculPuceNotRead() {
   let sum = 0;
@@ -23,7 +22,6 @@ function calculPuceNotRead() {
     sum = sum + tabPuceNotRead[index];
   }
 
-  let cpt = document.querySelector(".comptr");
   cpt.innerHTML = sum;
 }
 
@@ -41,7 +39,6 @@ function mouseReset(event) {
     puce[index].style.backgroundColor = colorwhite;
   }
 
-  let cpt = document.querySelector(".comptr");
   cpt.innerHTML = sum;
 }
 
