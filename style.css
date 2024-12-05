@@ -1,5 +1,11 @@
+@font-face {
+    font-family: PlusJakarta;
+    src: url(/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
 * {
     color: hsl(219, 12%, 42%);
+    font-family: PlusJakarta;
 }
 
 /*Header*/
@@ -18,7 +24,7 @@ header > p:hover {
     cursor: pointer;
 }
 
-.notifications-number {
+#notifications-number {
     background-color: hsl(224, 21%, 14%);
     color: white;
     padding: 2% 3%;
@@ -67,6 +73,11 @@ section {
     cursor: pointer;
 }
 
+.username:hover, .username:active{
+    color: #07307d;
+    cursor: pointer;
+}
+
 .post-name {
     font-weight: 800;
 }
@@ -82,30 +93,39 @@ section {
 .message {
     border: 1px solid gray;
     border-radius: 5px;
-    width: 100%;
-    height: 20%;
+    width: 90%;
+    height: 25%;
     padding: 2%;
 }
 
-.message:hover{
+.message:hover, .message:active{
     background-color: #f6fafd;
     border: none;
 }
 
 .chess-club{
-    color: #07307d;
     font-weight: 800;
+}
+
+.chess-club:hover{
+    color: #07307d;
     cursor: pointer;
 }
 
+.unread-marker {
+    color: red;
+    font-weight: 1500;
+    display: none;
+}
+
 /*Responsive*/
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 375px) {
     body{
         padding: 0;
     }
 
     header > h3 {
-        width: 40%;
+        width: 45%;
     }
 
     section{
