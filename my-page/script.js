@@ -22,8 +22,8 @@ function countNotificationsNotRead (){
     let count=0;
     divs.forEach(div =>{
         let color = getComputedStyle(div).backgroundColor;
-        if (color === 'hsl(211, 68%, 94%)') {
-            count++;
+        if (color === 'rgb(229, 239, 250)') {
+            count ++;
         }
     })
     document.querySelector(".numberOfNotifications").innerText = count;
@@ -36,7 +36,7 @@ function removeRedPoint (){
     const redPoint = document.querySelector(".redPoint");
     divs.forEach(div =>{
         let color = getComputedStyle(div).backgroundColor;
-        if (color === 'hsl(0, 0%, 100%)') {
+        if (color === 'rgb(255,255,255)') {
         redPoint.style.display = 'none';
         }
     })
