@@ -1,49 +1,107 @@
 let test = document.querySelectorAll(".mouse");
+let puce = document.querySelectorAll(".puce");
+const colorwhite = "hsl(0, 0%, 100%)";
+const colorblue = "hsl(211, 68%, 94%)";
+const colorred = "hsl(1, 90%, 64%)";
 
+let tabPuceNotRead = [0];
 
-let dernier=1;
+sum = 0;
+for (let index = 0; index < test.length; index++) {
+  tabPuceNotRead[index] = 1;
+  sum = sum + tabPuceNotRead[index];
+}
+
+let cpt = document.querySelector(".comptr");
+cpt.innerHTML = sum;
+
+function calculPuceNotRead() {
+  let sum = 0;
+  for (let index = 0; index < test.length; index++) {
+    sum = sum + tabPuceNotRead[index];
+  }
+
+  let cpt = document.querySelector(".comptr");
+  cpt.innerHTML = sum;
+}
+
+let resetF = document.querySelector(".reset");
+resetF.addEventListener("click", mouseReset);
+
+function mouseReset(event) {
+  let sum = 0;
+  for (let index = 0; index < test.length; index++) {
+    tabPuceNotRead[index] = 0;
+    sum = sum + tabPuceNotRead[index];
+  }
+
+  for (let index = 0; index < test.length; index++) {
+    puce[index].style.backgroundColor = colorwhite;
+  }
+
+  let cpt = document.querySelector(".comptr");
+  cpt.innerHTML = sum;
+}
+
+let dernier = 1;
 
 function mouseov0(event) {
-test[dernier].style.backgroundColor="hsl(0, 0%, 100%)";
-test[0].style.backgroundColor="hsl(211, 68%, 94%";
-dernier=0;
+  test[dernier].style.backgroundColor = colorwhite;
+  test[0].style.backgroundColor = colorblue;
+  dernier = 0;
+  tabPuceNotRead[0] = 0;
+  calculPuceNotRead();
+  puce[0].style.backgroundColor = colorwhite;
 }
 
 function mouseov1(event) {
-    test[dernier].style.backgroundColor="hsl(0, 0%, 100%)";
-    test[1].style.backgroundColor="hsl(211, 68%, 94%";
-    dernier=1;
- }
+  test[dernier].style.backgroundColor = colorwhite;
+  test[1].style.backgroundColor = colorblue;
+  dernier = 1;
+  tabPuceNotRead[1] = 0;
+  calculPuceNotRead();
+  puce[1].style.backgroundColor = colorwhite;
+}
 
- function mouseov2(event) {
-    test[dernier].style.backgroundColor="hsl(0, 0%, 100%)";
-    test[2].style.backgroundColor="hsl(211, 68%, 94%";
-    dernier=2;
- }
+function mouseov2(event) {
+  test[dernier].style.backgroundColor = colorwhite;
+  test[2].style.backgroundColor = colorblue;
+  dernier = 2;
+  tabPuceNotRead[2] = 0;
+  calculPuceNotRead();
+  puce[2].style.backgroundColor = colorwhite;
+}
 
- function mouseov3(event) {
-    test[dernier].style.backgroundColor="hsl(0, 0%, 100%)";
-    test[3].style.backgroundColor="hsl(211, 68%, 94%";
-    dernier=3;
- }
+function mouseov3(event) {
+  test[dernier].style.backgroundColor = colorwhite;
+  test[3].style.backgroundColor = colorblue;
+  dernier = 3;
+  tabPuceNotRead[3] = 0;
+  calculPuceNotRead();
+  puce[3].style.backgroundColor = colorwhite;
+}
 
- function mouseov4(event) {
-    test[dernier].style.backgroundColor="hsl(0, 0%, 100%)";
-    test[4].style.backgroundColor="hsl(211, 68%, 94%";
-    dernier=4;
- }
+function mouseov4(event) {
+  test[dernier].style.backgroundColor = colorwhite;
+  test[4].style.backgroundColor = colorblue;
+  dernier = 4;
+  tabPuceNotRead[4] = 0;
+  calculPuceNotRead();
+  puce[4].style.backgroundColor = colorwhite;
+}
 
- function mouseov5(event) {
-    test[dernier].style.backgroundColor="hsl(0, 0%, 100%)";
-    test[5].style.backgroundColor="hsl(211, 68%, 94%";
-    dernier=5;
- }
+function mouseov5(event) {
+  test[dernier].style.backgroundColor = colorwhite;
+  test[5].style.backgroundColor = colorblue;
+  dernier = 5;
+  tabPuceNotRead[5] = 0;
+  calculPuceNotRead();
+  puce[5].style.backgroundColor = colorwhite;
+}
 
-test[0].addEventListener("mouseover", mouseov0);
-test[1].addEventListener("mouseover", mouseov1);
-test[2].addEventListener("mouseover", mouseov2);
-test[3].addEventListener("mouseover", mouseov3);
-test[4].addEventListener("mouseover", mouseov4);
-test[5].addEventListener("mouseover", mouseov5);
-
-
+test[0].addEventListener("click", mouseov0);
+test[1].addEventListener("click", mouseov1);
+test[2].addEventListener("click", mouseov2);
+test[3].addEventListener("click", mouseov3);
+test[4].addEventListener("click", mouseov4);
+test[5].addEventListener("click", mouseov5);

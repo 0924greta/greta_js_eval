@@ -2,7 +2,7 @@
 body{   
     font-size: 12px;
     margin-top: 70px;
-    border:1 px solid white;
+    margin-bottom: 70px;
     background-color: rgb(240, 235, 235);
     font-family:"Plus Jakarta Sans";
     font-weight: 500;
@@ -17,16 +17,24 @@ font-weight: 800;
 
 }
 
+.puce{
+display:inline-block;
+background-color:hsl(1, 90%, 64%) ;
+height: 10px;
+width: 10px;
+border-radius: 70%;
+
+}
 
 .conteneur-grid{
 background-color: hsl(210, 60%, 98%);
 display:grid;
-grid-template-columns: 4fr 1fr 2fr 5fr;
+grid-template-columns: 4fr 1fr 4fr 4fr;
 
 
-}@media (max-width: 800px){
+}@media (max-width: 500px){
     .conteneur-grid{
-     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-columns: 1fr 2fr 2fr 1fr;
     }
    }
 
