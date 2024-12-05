@@ -14,7 +14,7 @@ body {
 .notifications-container {
     background-color: hsl(0, 0%, 100%);
     width: 90%;
-    max-width: 500px;
+    max-width: 630px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -33,7 +33,7 @@ body {
     background-color: hsl(219, 85%, 26%);
     color: hsl(0, 0%, 100%);
     padding: 4px 10px;
-    border-radius: 50%;
+    border-radius: 25%;
     font-size: 14px;
 }
 
@@ -63,13 +63,16 @@ body {
 .notification-item {
     display: flex;
     align-items: flex-start;
-    padding: 10px;
-    border-bottom: 1px solid hsl(205, 33%, 90%);
+    padding: 20px;
     font-size: 16px;
+    margin-top: 5px;
+
+    
 }
 
 .notification-item.unread {
-    background-color: hsl(211, 68%, 94%);
+    background-color: #F6FAFD;
+    border-radius: 5px;
 }
 
 .notification-item p {
@@ -77,8 +80,8 @@ body {
 }
 
 .notification-item .highlight {
-    color: hsl(1, 90%, 64%);
-    font-weight: 800;
+    color: #415A79;
+    font-weight: 500;
 }
 
 .notification-item .time {
@@ -86,6 +89,14 @@ body {
     font-size: 14px;
     color: hsl(219, 14%, 63%);
     margin-top: 5px;
+
+}
+
+.notification-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-left: 130px;
 }
 
 /* Avatar styles */
@@ -99,11 +110,11 @@ body {
 
 /* Message box styles */
 .message-box {
-    background-color: hsl(210, 60%, 98%);
-    border: 1px solid hsl(205, 33%, 90%);
+    background-color: #FFFFFF;
+    border: 1px solid #F2F2F3;
     padding: 10px;
     margin-top: 5px;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 14px;
     color: hsl(219, 12%, 42%);
 }
