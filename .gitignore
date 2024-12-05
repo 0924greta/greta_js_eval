@@ -23,3 +23,7 @@
 # ...à l'exception du fichier `.keep`
 !/log/.keep
 
+/screen
+link-miro.txt
+README.md
+style-guide.md
