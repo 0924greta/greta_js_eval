@@ -8,16 +8,17 @@ const buttonMarkAllRead = document.querySelector('button');
 notArray = notArray.concat(divNot);
 notArray = notArray.concat(divNotWithImg);
 notArray = notArray.concat(divNotWithComment);
+UpdateStatusNotification();
 
 
-function UpdataStatusNotification(){
-    let counter = 0;
+function UpdateStatusNotification(){
+    let counterNotificationRead = 0;
     notArray.forEach((div) => {
         if(div.getAttribute('status') === "unread"){
             div.firstElementChild.nextElementSibling.firstElementChild.lastElementChild.style.visibility = "visible"
             div.style.backgroundColor= "var(--body-color)";
             div.style.boxShadow = "1px 1px 3px var(--shadow-color)";
-            counter += 1;
+            counterNotificationRead += 1;
         }
         else if (div.getAttribute('status') === "read") {
             div.firstElementChild.nextElementSibling.firstElementChild.lastElementChild.style.visibility = "hidden"
@@ -25,11 +26,8 @@ function UpdataStatusNotification(){
             div.style.boxShadow = "0px 0px 0px";
         }
     })
-    document.querySelector('#not-counter').innerHTML = counter;
+    document.querySelector('#not-counter').innerText = counterNotificationRead;
 }
-
-
-UpdataStatusNotification();
 
 
 function MarkAllRead(){
@@ -41,7 +39,7 @@ function MarkAllRead(){
         buttonMarkAllRead.innerText = "Mark all as read";
         notArray.forEach(div => div.setAttribute('status', 'unread'));
     }
-    UpdataStatusNotification();
+    UpdateStatusNotification();
 }
 buttonMarkAllRead.addEventListener('click', MarkAllRead);
 
@@ -53,6 +51,6 @@ notArray.forEach(div => div.addEventListener('click', (event) => {
     else{
         event.target.setAttribute('status', 'unread');
     }
-    UpdataStatusNotification();
+    UpdateStatusNotification();
 }));
 
