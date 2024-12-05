@@ -2,23 +2,40 @@
 body{   
     font-size: 12px;
     margin-top: 70px;
+    border:1 px solid white;
+    background-color: rgb(240, 235, 235);
+    font-family:"Plus Jakarta Sans";
+    font-weight: 500;
 }   
 
 img{
 height: 70px; 
 }
 
+.gras{
+font-weight: 800;
+
+}
+
 
 .conteneur-grid{
+background-color: hsl(210, 60%, 98%);
 display:grid;
-grid-template-columns: 5fr 1fr 10fr;
+grid-template-columns: 4fr 1fr 2fr 5fr;
 
 
 }@media (max-width: 800px){
     .conteneur-grid{
-     grid-template-columns: 1px 70px 1fr;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
     }
    }
+
+
+
+
+  
+
+
 
 
  
