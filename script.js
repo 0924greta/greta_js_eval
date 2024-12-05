@@ -9,19 +9,6 @@ function updateNotifCounter() {
   return locateTarget(".unread").length;
 }
 
-function removeUnreadBadge(id) {
-  if (id < 1) {
-    locateTarget(".badge-unread").forEach((element) => {
-      element.classList.remove("badge-unread");
-    });
-    locateTarget(".unread").forEach((element) => {
-      element.classList.remove("unread");
-    });
-  } else {
-    locateTarget(".badge-unread")[id].classList.remove("badge-unread");
-  }
-}
-
 // function to add listerner to the "mark all as read" link
 function markAllReadListener() {
   // 2 targets with front update :
@@ -31,14 +18,19 @@ function markAllReadListener() {
 
   markAllReadBtn.addEventListener("click", () => {
     locateTarget(".unread").forEach((element, index) => {
-      removeUnreadBadge(0);
+      locateTarget(".badge-unread").forEach((element) => {
+        element.classList.remove("badge-unread");
+      });
+      locateTarget(".unread").forEach((element) => {
+        element.classList.remove("unread");
+      });
     });
     updateNotifCounter();
   });
 
   locateTarget(".unread").forEach((element, index) => {
     // Add listener to this element
-    element.addEventListener("click", () => {
+    element.addEventListener("click", function () {
       element.classList.remove("unread");
       unreadNotificationBadge[index].classList.remove("badge-unread");
       updateNotifCounter();
