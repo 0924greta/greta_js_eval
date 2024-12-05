@@ -10,7 +10,7 @@
 
   <!-- Fichiers CSS et JS -->
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -19,11 +19,10 @@
   </style>
 </head>
 <body>
-  
   <div class="background">
     <header>
-      <h3>Notifications <span class="notifications-number">3</span></h3>
-      <p>Mark all as read</p>
+      <h3>Notifications <span id="notifications-number">3</span></h3>
+      <p id="mark-all-as-read">Mark all as read</p>
     </header>
     <main>
       <section class="unread-notifications">
@@ -94,10 +93,7 @@
     </main>
 
   </div>
-  
-  
-  
-  
+
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
