@@ -1,4 +1,4 @@
-/* Base styles */
+/* Base style */
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: hsl(210, 60%, 98%);
@@ -10,7 +10,10 @@ body {
     min-height: 100vh;
 }
 
-/* Container styles */
+
+
+
+/* Container style */
 .notifications-container {
     background-color: hsl(0, 0%, 100%);
     width: 90%;
@@ -19,7 +22,12 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     box-sizing: border-box;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
+
+
+
 
 /* Header styles */
 .header {
@@ -34,7 +42,7 @@ body {
     color: hsl(0, 0%, 100%);
     padding: 4px 10px;
     border-radius: 25%;
-    font-size: 14px;
+    font-size: 16px;
     margin-left: 10px;;
 }
 
@@ -43,7 +51,7 @@ body {
     border: none;
     color: hsl(219, 85%, 26%);
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     padding: 5px 10px;
     border-radius: 5px;
@@ -52,6 +60,9 @@ body {
 .mark-read-btn:active {
     color: #B1B1B9;
 }
+
+
+
 
 /* Notifications list */
 .notifications-list {
@@ -93,8 +104,6 @@ body {
     margin: 0;
 }
 
-
-
 .highlight {
     color: #415A79;
     font-weight: 900;
@@ -108,7 +117,7 @@ body {
 
 .notification-item .time {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     color: hsl(219, 14%, 63%);
     margin-top: 5px;
 
@@ -118,8 +127,11 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 4px;
-    margin-left: 400px;
+    margin-left: 520px;
+    cursor: pointer;
 }
+
+
 
 /* Avatar styles */
 .avatar {
@@ -135,16 +147,19 @@ body {
     background-color: #FFFFFF;
     border: 1px solid #F2F2F3;
     padding: 10px;
-    margin-top: 5px;
+    margin-top: 15px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 16px;
     color: hsl(219, 12%, 42%);
     cursor: pointer;
+    
 }
 
 .message-box:hover {
     background-color: #E5EFF9;
 }    
+
+
 
 /* Responsive styles */
 @media (max-width: 768px) {

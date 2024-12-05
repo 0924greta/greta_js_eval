@@ -1,46 +1,29 @@
 // Select elements
 const markAllReadButton = document.getElementById("mark-all-read");
 const notificationCount = document.getElementById("notification-count");
-const notifications = document.querySelectorAll(".notification-item");
+const notifications = document.querySelectorAll(".notification-item.unread");
 
-// Function to update the unread count
-function updateNotificationCount() {
-  const unreadNotifications = document.querySelectorAll(
+// Update the unread count
+const updateNotificationCount = () =>
+  (notificationCount.textContent = document.querySelectorAll(
     ".notification-item.unread"
-  );
-  notificationCount.textContent = unreadNotifications.length;
-}
+  ).length);
 
-// Function to mark a single notification as read
-function markAsRead(notification) {
-  if (notification.classList.contains("unread")) {
-    notification.classList.remove("unread");
-    notification.style.backgroundColor = "#ffffff";
+// Mark a notification as read
+const markAsRead = (notification) => {
+  notification.classList.remove("unread");
+  notification.style.backgroundColor = "#ffffff";
+  const symbol = notification.querySelector(".notification-symbol");
+  if (symbol) symbol.style.display = "none";
+  updateNotificationCount();
+};
 
-    // Find and hide the notification symbol
-    const notificationSymbol = notification.querySelector(
-      ".notification-symbol"
-    );
-    if (notificationSymbol) {
-      notificationSymbol.style.display = "none";
-    }
+// Add event listeners
+notifications.forEach((notification) =>
+  notification.addEventListener("click", () => markAsRead(notification))
+);
 
-    updateNotificationCount();
-  }
-}
-
-//EVENT LISTENER
-// Event listener for each unread notification
-notifications.forEach((notification) => {
-  notification.addEventListener("click", () => {
-    markAsRead(notification);
-  });
-});
-
-// Event listener for the "Mark all as read" button
 markAllReadButton.addEventListener("click", () => {
-  notifications.forEach((notification) => {
-    markAsRead(notification);
-  });
+  notifications.forEach(markAsRead);
   updateNotificationCount();
 });
