@@ -35,9 +35,11 @@ a {
   color: var(--neutral-grey-text);
   font-weight: 800 !important;
   text-decoration: none;
+  margin: 0px 5px 0px 5px;
 }
 .author {
   color: var(--neutral-dark-blue);
+  margin: 0px;
 }
 a:link {
   color: var(--color-primary-blue);
@@ -188,7 +190,7 @@ h2 {
   padding: 20px;
   border-radius: 5px;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   display: block;
   font-weight: 500 !important;
 }
@@ -198,7 +200,7 @@ h2 {
     padding: 10px;
     border-radius: 5px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: block;
     font-weight: 500 !important;
   }
