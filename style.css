@@ -74,8 +74,7 @@ section {
 }
 
 .notifications-title{
-    /*width: 35rem;*/
-    /*width: ;*/
+    width: 35rem;
 }
 
 .username {
@@ -92,12 +91,13 @@ section {
     font-weight: 800;
 }
 
+img {
+    height: 30%;
+}
+
 .chess-image {
     margin-left: auto;
     cursor: pointer;
-}
-.rizky-image {
-    height: 30%;
 }
 
 .message {
@@ -132,8 +132,8 @@ section {
     margin-left: 1%;
 }
 
-/*Responsive*/
-@media only screen and (max-width :375px) {
+/*Responsive Smartphone*/
+@media only screen and (max-width :440px) {
     body{
         padding: 0;
         margin: 0;
@@ -164,5 +164,12 @@ section {
     img{
         width: 15%;
         margin-top: 5%;
+    }
+}
+
+/*Responsive Tablettes*/
+@media only screen and (max-width :1400px) {
+    .notifications-title{
+        width: calc(100% - 15%);
     }
 }
