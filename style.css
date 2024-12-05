@@ -84,7 +84,7 @@ header h1 {
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 5px;
-  background-color: var(--white);
+  background-color: transparent;
 }
 
 .notification.unread {
@@ -102,14 +102,24 @@ header h1 {
   margin-left:10px;
 }
 
+
+
 .notification img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 5%;
 }
 
 .notification p {
   margin: 0;
+}
+
+.notification-paragraphe-statut-dot{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1%;
 }
 
 .notification .time {
@@ -139,30 +149,28 @@ strong:hover {
 /* Footer */
 footer {
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  background-color: var(--white); /* Footer background to match the rest */
-  padding: 20px 0; /* Spacing around text */
-  box-shadow: 0 -2px 2px var(--very-dark-blue); /* Adds slight shadow to visually separate from main content */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  padding: 20px 0;
+  box-shadow: 0 -2px 2px var(--very-dark-blue);
 }
 
 .attribution {
-  text-align: center; /* Ensures text is centered */
+  text-align: center;
   font-size: 14px;
-  color: var(--grayish-blue); /* Uses grayish color for attribution */
+  color: var(--grayish-blue);
 }
 
 .attribution a {
-  color: var(--blue); /* Link with blue color from the palette */
-  text-decoration: none; /* Removes underline from links */
+  color: var(--blue);
+  text-decoration: none;
 }
 
 .attribution a:hover {
-  color: var(--red); /* Red hover effect for links */
-}
+  color: var(--red);
 
-/* Responsive */
-/* Responsive - Mobile (375px and below) */
+
 @media (max-width: 375px) {
   body {
     font-size: 14px;
@@ -173,9 +181,9 @@ footer {
   }
 
   header {
-    flex-direction: row; /* Row layout to keep title and button side by side */
-    justify-content: space-between; /* Equal spacing between title and button */
-    align-items: center; /* Center alignment */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: 1%;
   }
 
@@ -185,7 +193,7 @@ footer {
   }
 
   .notification {
-    flex-direction: column; /* Notifications stacked in column */
+    flex-direction: column;
   }
 
   .notification p {
@@ -193,12 +201,13 @@ footer {
   }
 
   .notification .time {
-    font-size: 12px; /* Smaller font size for time */
+    font-size: 12px;
   }
 
   .mark-all-read {
-    margin-top: 0; /* No extra spacing between the button and notifications */
-    font-size: 14px; /* Slightly larger font size on mobile */
+    margin-top: 0;
+    font-size: 14px;
     color: var(--grayish-blue);
   }
+}
 }
