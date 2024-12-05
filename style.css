@@ -93,11 +93,13 @@ header h1 {
 }
 
 .status-dot {
+  display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--blue);
-  margin-right: 10px;
+  background-color: var(--red);
+  margin-right:10px;
+  margin-left:10px;
 }
 
 .notification img {
