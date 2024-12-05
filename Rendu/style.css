@@ -24,7 +24,7 @@ section {
     background-color: var(--section-color);
     margin: 50px 25vw 0 25vw;
     border-radius: 20px;
-    padding: 40px 40px 40px 40px;
+    padding: 40px;
     box-shadow: 10px 10px 10px var(--shadow-color);
 }
 
@@ -62,7 +62,7 @@ button {
     border: 0px;
     background-color: var(--section-color);
     color: var(--text-color);
-    margin: auto 0px auto 0px;
+    margin: auto 0px;
     padding: 0px 0px 10px 0px;
     font-size: 16px;
     font-weight: 400;
@@ -88,7 +88,7 @@ button:hover {
 }
 
 .not-with-img{
-    grid-template-columns: 60px auto 60px;
+    grid-template-columns: 60px auto;
 }
 
 .not-img-id {
@@ -132,8 +132,7 @@ button:hover {
     border: 1px solid var(--text2-color);
     padding: 20px;
     border-radius: 10px;
-    margin-left: 20px;
-    margin-top: 15px;
+    margin: 15px auto auto 20px
 }
 
 .not-comment:hover {
@@ -180,6 +179,7 @@ a:visited {
     color: var(--text-color);
 }
 
+
 a:hover{
     color: var(--blue-color);
 }
@@ -191,7 +191,7 @@ a:hover{
         margin: -10px -10px 0 -10px;
         border-radius: 0px;
         box-shadow: 0px 0px 0px var(--shadow-color);
-        padding: 20px 15px 20px 15px;
+        padding: 20px 15px;
     }
 
     p {
@@ -233,13 +233,6 @@ a:hover{
 
     .not-main p {
         margin: 0px 1px 0px 0px;
-    }
-
-    .not-dot {
-        width: 10px;
-        height: 10px;
-        margin: auto 0px auto 5px;
-        border-radius: 10px;
     }
     
   }
