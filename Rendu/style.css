@@ -88,7 +88,7 @@ button:hover {
 }
 
 .not-with-img{
-    grid-template-columns: 60px auto;
+    grid-template-columns: 60px auto 60px;
 }
 
 .not-img-id {
@@ -233,6 +233,10 @@ a:hover{
 
     .not-main p {
         margin: 0px 1px 0px 0px;
+    }
+
+    .not-dot {
+        margin-left: 5px;
     }
     
   }
