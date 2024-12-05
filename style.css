@@ -31,7 +31,6 @@ background-color: hsl(210, 60%, 98%);
 display:grid;
 grid-template-columns: 4fr 1fr 4fr 4fr;
 
-
 }@media (max-width: 500px){
     .conteneur-grid{
      grid-template-columns: 1fr 2fr 2fr 1fr;

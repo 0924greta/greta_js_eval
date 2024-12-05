@@ -2,7 +2,7 @@ let test = document.querySelectorAll(".mouse");
 let puce = document.querySelectorAll(".puce");
 const colorwhite = "hsl(0, 0%, 100%)";
 const colorblue = "hsl(211, 68%, 94%)";
-const colorred = "hsl(1, 90%, 64%)";
+const colorblue2 = "hsl(205, 33%, 90%)";
 
 let tabPuceNotRead = [0];
 
@@ -14,6 +14,8 @@ for (let index = 0; index < test.length; index++) {
 
 let cpt = document.querySelector(".comptr");
 cpt.innerHTML = sum;
+cpt.style.backgroundColor=colorblue2;
+
 
 function calculPuceNotRead() {
   let sum = 0;
