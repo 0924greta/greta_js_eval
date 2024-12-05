@@ -22,7 +22,7 @@ h1 {
 }
 
 section {
-    margin : 3% 25%;
+    margin : auto;
     width: 50%;
     background-color: hsl(0, 0%, 100%);
     border-radius: 15px;
@@ -40,8 +40,7 @@ section {
 .message {
     background-color: hsl(211, 68%, 94%);
     display: flex;
-    padding: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     flex-wrap: wrap;
     align-items: center;
@@ -58,19 +57,27 @@ div.private-message p {
 }
 
 .private-message {
-    border : 1px solid hsl(205, 33%, 90%);
-    margin-left:80px;
+    border : 2px solid hsl(205, 33%, 90%);
+    width: 85%;
+    margin-left: auto;
     padding: 2px 15px 2px 15px;
+    border-radius: 8px;
+}
+
+.private-message:hover {
+    background-color: hsl(205, 33%, 90%);
+    border:2px solid hsl(205, 33%, 90%);
 }
 
 .picture{
-    margin-left: 400px;
+    margin-left: auto;
+    flex-wrap: wrap;
 }
 
 .time{
     font-weight: 100;
     color: hsl(219, 12%, 42%);
-    margin-top: 0px;
+    margin-top: auto;
 }
 
 article.home button {
@@ -105,9 +112,9 @@ article.home button:hover{
 .redPoint {
     height: 9px;
     width: 9px;
-    border-radius: 90%;
+    border-radius: 50%;
     background-color: hsl(1, 90%, 64%);
-    margin: 10px;
+    margin-left: 5px;
 }
 
 .textAndRedPoint {
@@ -119,7 +126,13 @@ article.home button:hover{
     p {
         line-height: 1;
     }
+
+    .picture{
+        margin-left: 250px;
+    }
+
     section {
         width: 100%;
+        margin: 0px;
     }
 }

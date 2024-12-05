@@ -30,3 +30,14 @@ function countNotificationsNotRead (){
 }
 
 countNotificationsNotRead();
+
+//Fonction qui permet de faire disparaître le bouton rouge quand le background de la div(message) est blanc
+function removeRedPoint (){
+    const redPoint = document.querySelector(".redPoint");
+    divs.forEach(div =>{
+        let color = getComputedStyle(div).backgroundColor;
+        if (color === 'hsl(0, 0%, 100%)') {
+        redPoint.style.display = 'none';
+        }
+    })
+}
