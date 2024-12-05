@@ -1,5 +1,3 @@
-const btn = document.querySelector("#mark-all-read");
-
 function clearNotif() {
   const count = document.querySelector("#notification-count");
   count.innerText = "0";
@@ -21,4 +19,5 @@ function markAllRead() {
   clearUnread();
 }
 
+const btn = document.querySelector("#mark-all-read");
 btn.addEventListener("click", markAllRead);
