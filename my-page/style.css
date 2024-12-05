@@ -70,6 +70,7 @@ div.private-message p {
 .time{
     font-weight: 100;
     color: hsl(219, 12%, 42%);
+    margin-top: 0px;
 }
 
 article.home button {
@@ -83,4 +84,42 @@ article.home button {
 article.home button:hover{
     color: hsl(224, 21%, 14%);
     cursor: pointer;
+}
+
+.numberOfNotifications {
+    border-radius: 5px;
+    height: 25px;
+    width: 30px;
+    background-color: hsl(218, 82%, 24%);
+    margin: 10px;
+    color: white;
+    text-align: center;
+    font-weight: 800;
+}
+
+.homeLeft {
+    display: flex;
+    align-items: center;
+}
+
+.redPoint {
+    height: 9px;
+    width: 9px;
+    border-radius: 90%;
+    background-color: hsl(1, 90%, 64%);
+    margin: 10px;
+}
+
+.textAndRedPoint {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 350px) {
+    p {
+        line-height: 1;
+    }
+    section {
+        width: 100%;
+    }
 }
