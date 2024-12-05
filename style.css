@@ -15,7 +15,7 @@
     font-weight: 800;
     font-style: normal;
   }
-
+  /*witdh 100 vh*/
   body {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size : 16px;
@@ -145,6 +145,10 @@
     cursor: pointer;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   p {
     color: hsl(219, 12%, 42%);
     margin: 0;
@@ -158,11 +162,21 @@
     color: hsl(224, 21%, 14%);
   }
 
-  b {
+  .bold-blue {
+    font-weight: 600;
+    color: hsl(219, 85%, 26%);
+  }
+
+  .bold-blue:visited{
+    color: hsl(219, 12%, 42%);
+  }
+
+  .bold-gray {
+    font-weight: 600;
     color: hsl(219, 12%, 42%)
   }
 
-  b:hover, strong:hover{
+  .bold-gray:hover, strong:hover, .bold-blue:hover{
     cursor: pointer;
     color: hsl(219, 85%, 26%);
   }
@@ -173,10 +187,6 @@
   background-color: hsl(1, 90%, 64%);
   border-radius: 50%;
   display: inline-block;
-  }
-  
-  .bold-blue {
-    color: hsl(219, 85%, 26%);
   }
 
   .attribution{
