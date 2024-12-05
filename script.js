@@ -1,13 +1,17 @@
 // counter of notifications
 let notifCounter = 0;
 
+// function get locate / target
+
+function locateTarget(element) {
+  return document.querySelectorAll(element);
+}
+
 // function to update notifications counter (in header)
 function updateNotifCounter() {
-  const unreadNotificationArray = document.querySelectorAll(".unread");
-  notifCounter = unreadNotificationArray.length;
   const targetNotifCounter = document.querySelector("#container-nav div");
-  targetNotifCounter.innerText = notifCounter;
-  return notifCounter;
+  targetNotifCounter.innerText = locateTarget(".unread").length;
+  return locateTarget(".unread").length;
 }
 
 // function to add listerner to the "mark all as read" link
