@@ -6,39 +6,38 @@
     font-weight: bolder; /* Optionnel : bold, lighter, etc. */
     font-style: normal; /* Optionnel : italic, oblique, etc. */
 }
-/**:root{
 
-    -- Red: hsl(1, 90%, 64%);
-    -- Blue: hsl(219, 85%, 26%);
-    -- White: hsl(0, 0%, 100%);
-    -- Very light grayish blue: hsl(210, 60%, 98%);
-    -- Light grayish blue 1: hsl(211, 68%, 94%);
-    -- Light grayish blue 2: hsl(205, 33%, 90%);
-    -- Grayish blue: hsl(219, 14%, 63%);
-    -- Dark grayish blue: hsl(219, 12%, 42%);
-    -- Very dark blue: hsl(224, 21%, 14%);
-}**/
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: var(--very-dark-blue);
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family:Plusjakarta sans ;
     font-weight: 400;
     max-width: 1440px;
-    height: 100%;
     padding: 60px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: aquamarine;
+    
 }
 
 /*Component styles */
-
 
 .modal-context{
 
@@ -48,23 +47,23 @@ body{
     justify-self: center;
     align-self: center;
     min-width: 1500px;
-    background-color: hsl(210, 60%, 98%);
+    background-color: var(--very-light-grayish-blue);
 }
-
 
 .modal{
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 20px;
     padding: 20px;
-    max-width: 700px;
+    min-width: 900px;
     border-radius: 15px;
-    background-color:hsl(0, 0%, 100%) ;
-    
-
+    background-color:var(--white) ;
 }
+
+/* Modale content style*/
 
 .title-counter-all-read{
 
@@ -73,12 +72,6 @@ body{
     justify-content: space-between;
     margin: 30px;
     
-}
-#all-read{
-    color: hsl(219, 12%, 42%)
-}
-#all-read:hover{
-    color: hsl(224, 21%, 14%);
 }
 
 #title-counter{
@@ -90,23 +83,37 @@ body{
 }
 
 #notif-counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 25px;
     height: 23px;
     border-radius: 5px;
     color: hsl(0, 0%, 100%) ;
-    background-color: hsl(224, 21%, 14%);
+    background-color: var(--blue);
 }
+
+#mark-all-read{
+    color: var(--grayish-blue);
+    font-weight: bold;
+}
+
+#mark-all-read:hover{
+    color: var(--blue);
+}
+
+/* Article card content */
+
 .card{
+
     margin: 3px 10px 3px 10px ;
     padding: 15px;
     display: flex;
     gap: 2px;
     width: 100%;
     border-radius: 10px;
-    /*background-color: hsl(211, 68%, 94%);*/
+    
 }
-
-
 
 .avatar-picture{
     margin: 5px;
@@ -119,65 +126,98 @@ body{
     flex-direction: column;
     flex-wrap: nowrap;
 }
+
 .user-name{
-    color: hsl(219, 12%, 42%);
+    color: var(--dark-grayish-blue);
 }
+
 #user-name-1:hover{
-    color: hsl(224, 21%, 14%);  
+    color: var(--blue);  
 }
+
 #user-name-2:hover{
-    color: hsl(224, 21%, 14%);  
+    color: var(--blue);  
 }
+
 #user-name-3:hover{
-    color: hsl(224, 21%, 14%);  
-} #user-name-4:hover{
-    color: hsl(224, 21%, 14%);  
+    color: var(--blue);  
 }
+
+#user-name-4:hover{
+    color: var(--blue);  
+}
+
 #user-name-5:hover{
-    color: hsl(224, 21%, 14%);  
+    color: var(--blue);  
 }
+
 #user-name-6:hover{
-    color: hsl(224, 21%, 14%);  
+    color: var(--blue);  
 }
+
 #user-name-7:hover{
-    color: hsl(224, 21%, 14%);  
+    color: var(--blue);  
+}
+
+.timer{
+    color: var(--grayish-blue);
+    font-weight: bold;
 }
 
 .p-mark{
     
-    width: 400px;
+    max-width: 600px;
     display: flex;
     gap: 10px;
     
 }
-.notification{
-    width: 100%;
+
+.chip{
+    width: 10px;
+    height: 10px;
+    margin: 5px;
     display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--red);
+}
+
+.notifications{
+    margin: 5px;
+    width: 400px;
+    display: flex;
+    align-items:first baseline;
     flex-wrap:nowrap;
-color: hsl(205, 33%, 90%);
 }
 
 #span-chess{
+    display: inline;
     font-weight: 800;
-color: hsl(219, 12%, 42%)
+    color: var(--dark-grayish-blue);
 }
 
 #span-chess:hover{
-color: hsl(224, 21%, 14%);
+    color: var(--blue);
+}
 
-}
 #other-span{
+    display: flex;
+    display: inline;
+    width: 300px;
     font-weight: 700;
-    color: hsl(219, 12%, 42%) ;
+    color: var(--dark-grayish-blue) ;
 }
+
 #other-span:hover{
-    color: hsl(224, 21%, 14%);
+    color: var(--blue);
 }
+
 /*Particular styles*/
 
 #card-4{ 
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .notif-header{
@@ -185,22 +225,30 @@ flex-direction: column;
     gap: 10px;
 }
 
-.message{
+#message{
     max-width: 545px;
     margin: 10px;
     padding: 15px;
-    border: solid 2px hsl(205, 33%, 90%);
+    border: solid 2px  var(--light-grayish-blue-2);
     display: flex;
+    align-self: flex-end;
     border-radius: 10px;
     
 }
+
 #message:hover{
-    background-color: hsl(205, 33%, 90%);
+    background-color:  var(--light-grayish-blue-2);
 }
+
 #posted-picture{
     max-width: 60px;
     max-width: 60px;
     display: flex;
-    justify-self: flex-end;
-margin: 20px;
+    
+    align-self: flex-end;
+    margin: 20px;
+    cursor: pointer;
 }
+
+/* Add responsive*/
+
