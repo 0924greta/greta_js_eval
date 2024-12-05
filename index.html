@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <script src="script.js" defer></script>
   
   <title>Frontend Mentor | Notifications page</title>
 
@@ -22,47 +24,48 @@
   <main>
 
     <header>
-      <h1>Notifications <span id="notification-number">3</span></h1>
+      <h1>Notifications <span id="notification-number">7</span></h1>
       <h2>Mark all as read</h2>
     </header>
 
 
-    <section>
+    <section status="unread">
       <div class="img">
         <img src="./assets/images/avatar-mark-webber.webp" alt="avatar-mark-webber">
       </div>
         <div class="notif-information">
-          <p><b class="avatar-name">Mark Webber </b> reacted to your recent post <b>My first tournament today !</b></p>
+          <p><b class="avatar-name">Mark Webber </b> reacted to your recent post <strong>My first tournament today ! </strong><span class="red"></span></p>
           <p class="time-information">1m ago</p>
         </div>
     </section>
 
-    <section>
+
+    <section status="unread">
       <div class="img">
         <img src="./assets/images/avatar-angela-gray.webp" alt="avatar-angela-gray">
       </div>
         <div class="notif-information"> 
-          <p><b class="avatar-name">Angela Gray </b> followed you</p>
+          <p><b class="avatar-name">Angela Gray </b> followed you <span class="red"></span></p>
           <p class="time-information">5m ago</p>
         </div>
     </section>
 
-    <section>
+    <section status="unread">
         <div class="img">
           <img src="./assets/images/avatar-jacob-thompson.webp" alt="avatar-jacob-thompson">
         </div>
         <div class="notif-information">
-          <p><b class="avatar-name">Jacob Thompson </b> has joined your group <strong>Chess Club</strong></p>
+          <p><b class="avatar-name">Jacob Thompson </b> has joined your group <strong>Chess Club </strong><span class="red"></span></p>
           <p class="time-information">1 day ago</p>
         </div>
     </section>
 
-    <section>
+    <section status="unread">
         <div class="img">
           <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="avatar-rizky-hasanuddin">
         </div>
         <div class="notif-information">
-          <p><b class="avatar-name">Rizky Hasanuddin </b> sent you a private message</p>
+          <p><b class="avatar-name">Rizky Hasanuddin </b> sent you a private message <span class="red"></span></p>
           <p class="time-information">5 days ago</p>
           <p id="message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
             I'm already having lots of fun and improving my game.
@@ -70,33 +73,33 @@
         </div>
     </section>
 
-    <section>
+    <section status="unread">
       <div class="img">
         <img src="./assets/images/avatar-kimberly-smith.webp" alt="avatar-kimberly-smith">
       </div>
       <div class="notif-information">
-        <p><b class="avatar-name">Kimberly Smith </b> commented on your picture</p>
+        <p><b class="avatar-name">Kimberly Smith </b> commented on your picture <span class="red"></span></p>
         <p class="time-information">1 week ago</p>
       </div>
       <img src="./assets/images/image-chess.webp" alt="publication-commented">
     </section>
 
-    <section>
+    <section status="unread">
       <div class="img">
         <img src="./assets/images/avatar-nathan-peterson.webp" alt="avatar-nathan-peterson">
       </div>
       <div class="notif-information">
-        <p><b class="avatar-name">Nathan Peterson </b> reacted to your recent post <b>5 end-game strategies to increase your win rate</b></p>
+        <p><b class="avatar-name">Nathan Peterson </b> reacted to your recent post <strong>5 end-game strategies to increase your win rate </strong><span class="red"></span></p>
         <p class="time-information">2 weeks ago</p>
       </div>
     </section>
 
-    <section>
+    <section status="unread">
         <div class="img">
           <img src="./assets/images/avatar-anna-kim.webp" alt="avatar-anna-kim">
         </div>
         <div class="notif-information">
-          <p><b class="avatar-name">Anna Kim </b> left the group <strong>Chess Club</strong></p>
+          <p><b class="avatar-name">Anna Kim </b> left the group <strong>Chess Club </strong><span class="red"></span></p>
           <p class="time-information">2 weeks ago</p>
         </div>
     </section>

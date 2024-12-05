@@ -2,15 +2,16 @@ body{
     background-color: #f9fafe;
     font-family: Plus Jakarta Sans;
     font-size: 16px;
-    width: 1440px;
+   /* width: 1440px;*/
 }
 
 main{
     background-color: hsl(0, 0%, 100%);
-    width: 680px;
+    width: 60%;
     margin: 90px auto;
     padding: 10px 40px;
     border-radius: 18px;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.12),
 }
 
 header{
@@ -34,15 +35,22 @@ h2{
     font-weight: 500;
 }
 
+h2:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: #435c88;
+}
+
 section{
-    background-color: #f6fafd;
+   background-color: #f6fafd;
     margin: 10px auto;
     padding: 12px 22px;
     border-radius: 12px;
-
     display: flex;
     flex-direction: row;
+   /* box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.12) */
 }
+
 
 section > img:last-of-type{
     margin-top: 20px;
@@ -51,10 +59,30 @@ section > img:last-of-type{
     height: 50px;
 }
 
+section > img:last-of-type:hover{
+    cursor: pointer;
+}
+
 
 strong{
-    color: #1a336c;
+    color: #81858f;
     font-weight: 800;
+}
+
+strong:hover{
+    cursor: pointer;
+    color: #08307b;
+}
+
+b{
+    font-weight: 800;
+    color: #20232d;
+}
+
+b:hover{
+    color: #08307b;
+    font-weight:900;
+    cursor: pointer;
 }
 
 section img{
@@ -88,3 +116,35 @@ section p{
     padding: 20px;
 }
 
+#message:hover{
+    background-color: #e5eff9;
+    cursor: pointer;
+}
+
+.red{
+    width: 2px;
+    padding: 3px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    height: 2px;
+}
+
+
+
+
+@media screen and(max-width: 900px) {
+
+    body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 0.7em;
+        background-color: white;
+    }
+
+    main{
+        width: 100%;
+        margin: 0;
+    }
+}
