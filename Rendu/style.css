@@ -24,7 +24,7 @@ section {
     background-color: var(--section-color);
     margin: 50px 25vw 0 25vw;
     border-radius: 20px;
-    padding: 40px 40px 0 40px;
+    padding: 40px 40px 40px 40px;
     box-shadow: 10px 10px 10px var(--shadow-color);
 }
 
@@ -78,7 +78,7 @@ button:hover {
     background-color: var(--body-color);
     box-shadow: 1px 1px 3px var(--shadow-color);
     display: grid;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 25px;
     border-radius: 10px;
 }
@@ -105,21 +105,18 @@ button:hover {
     margin-left: 20px;
 }
 
-.not-msg {
-    display: flex;
-}
-
-.not-msg p {
+.not-main p {
     margin: 0px 10px 0px 0px;
     color: var(--text-color);
 }
 
 .not-dot {
+    display: inline-block;
     background-color: var(--dot-color);
-    width: 0.5vw;
-    height: 0.5vw;
-    margin: auto 0px auto 0px;
-    border-radius: 0.5vw;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
 }
 
 .not-time {
@@ -194,7 +191,7 @@ a:hover{
         margin: -10px -10px 0 -10px;
         border-radius: 0px;
         box-shadow: 0px 0px 0px var(--shadow-color);
-        padding: 20px 15px 0 15px;
+        padding: 20px 15px 20px 15px;
     }
 
     p {
@@ -234,19 +231,14 @@ a:hover{
         margin-left: 10px;
     }
 
-    .not-msg {
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-
-    .not-msg p {
+    .not-main p {
         margin: 0px 1px 0px 0px;
     }
 
     .not-dot {
         width: 10px;
         height: 10px;
-        margin: auto 0px auto 0px;
+        margin: auto 0px auto 5px;
         border-radius: 10px;
     }
     

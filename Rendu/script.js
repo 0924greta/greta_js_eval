@@ -9,6 +9,7 @@ notArray = notArray.concat(divNot);
 notArray = notArray.concat(divNotWithImg);
 notArray = notArray.concat(divNotWithComment);
 
+
 function UpdataStatusNotification(){
     let counter = 0;
     notArray.forEach((div) => {
