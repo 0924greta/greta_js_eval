@@ -1,0 +1,122 @@
+/* Base styles */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: hsl(210, 60%, 98%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container styles */
+.notifications-container {
+    background-color: hsl(0, 0%, 100%);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.notification-count {
+    background-color: hsl(219, 85%, 26%);
+    color: hsl(0, 0%, 100%);
+    padding: 4px 10px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.mark-read-btn {
+    background: none;
+    border: none;
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mark-read-btn:hover {
+    background-color: hsl(211, 68%, 94%);
+}
+
+/* Notifications list */
+.notifications-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid hsl(205, 33%, 90%);
+    font-size: 16px;
+}
+
+.notification-item.unread {
+    background-color: hsl(211, 68%, 94%);
+}
+
+.notification-item p {
+    margin: 0;
+}
+
+.notification-item .highlight {
+    color: hsl(1, 90%, 64%);
+    font-weight: 800;
+}
+
+.notification-item .time {
+    display: block;
+    font-size: 14px;
+    color: hsl(219, 14%, 63%);
+    margin-top: 5px;
+}
+
+/* Avatar styles */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Message box styles */
+.message-box {
+    background-color: hsl(210, 60%, 98%);
+    border: 1px solid hsl(205, 33%, 90%);
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: hsl(219, 12%, 42%);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .notifications-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+    }
+}
