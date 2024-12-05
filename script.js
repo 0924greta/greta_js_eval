@@ -1,35 +1,34 @@
-// Sélection des éléments
-const markAllReadButton = document.querySelector(".mark-all-read");
+// Sélection des éléments importants
 const notifications = document.querySelectorAll(".notification");
-const notificationCount = document.querySelector(".notification-count");
+const notificationCountEl = document.querySelector(".notification-count");
+const markAllReadBtn = document.querySelector(".mark-all-read");
 
-// Mettre en mode "read" les notifications de Anna Kim, Nathan Peterson, Kimberly Smith, Rizky Hasanuddin
-const readNotifications = [
-  document.querySelectorAll(".notification")[3], // Rizky Hasanuddin
-  document.querySelectorAll(".notification")[4], // Kimberly Smith
-  document.querySelectorAll(".notification")[5], // Nathan Peterson
-  document.querySelectorAll(".notification")[6], // Anna Kim
-];
+// Fonction pour mettre à jour le compteur
+function updateNotificationCount() {
+  const unreadNotifications = document.querySelectorAll(".notification.unread");
+  notificationCountEl.textContent = unreadNotifications.length;
+}
 
-// Supprimer la classe 'unread' et cacher les pastilles de statut pour les notifications marquées comme lues
-readNotifications.forEach((notification) => {
-  notification.classList.remove("unread");
-  const statusDot = notification.querySelector(".status-dot");
-  if (statusDot) {
-    statusDot.style.display = "none"; // Masquer la pastille
+// Fonction pour marquer une notification comme lue
+function markAsRead(notification) {
+  if (notification.classList.contains("unread")) {
+    notification.classList.remove("unread");
+    updateNotificationCount();
   }
+}
+
+// Ajouter un écouteur à chaque notification pour la marquer comme lue
+notifications.forEach((notification) => {
+  notification.addEventListener("click", () => markAsRead(notification));
 });
 
-// Fonction pour marquer toutes les notifications comme lues
-markAllReadButton.addEventListener("click", () => {
-  notifications.forEach((notification) => {
-    notification.classList.remove("unread"); // Enlever la classe "unread"
-    const statusDot = notification.querySelector(".status-dot");
-    if (statusDot) {
-      statusDot.style.display = "none"; // Masquer la pastille
-    }
-  });
-
-  // Mettre à jour le nombre de notifications non lues
-  notificationCount.textContent = 0;
+// Marquer toutes les notifications comme lues
+markAllReadBtn.addEventListener("click", () => {
+  notifications.forEach((notification) =>
+    notification.classList.remove("unread")
+  );
+  updateNotificationCount();
 });
+
+// Initialiser le compteur
+updateNotificationCount();
