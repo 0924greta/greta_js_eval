@@ -1,9 +1,7 @@
 // Select elements
 const markAllReadButton = document.getElementById("mark-all-read");
 const notificationCount = document.getElementById("notification-count");
-const unreadNotifications = document.querySelectorAll(
-  ".notification-item.unread"
-);
+const unreadNotifications = document.querySelectorAll(".notification-item");
 
 // Mark all notifications as read
 markAllReadButton.addEventListener("click", () => {
