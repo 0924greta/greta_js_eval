@@ -1,13 +1,13 @@
-body {
-    background-color: hsl(0, 0%, 100%);
-    background-color: hsl(210, 60%, 98%);
-    background-color: hsl(211, 68%, 94%);
-    background-color: hsl(205, 33%, 90%);
-    background-color: hsl(219, 14%, 63%);
-    background-color: hsl(219, 12%, 42%);
-    background-color: hsl(224, 21%, 14%);
-    background-color: hsl(1, 90%, 64%);
-    background-color: hsl(219, 85%, 26%)
+:root {
+    --section-color: hsl(0, 0%, 100%);
+    --body-color: hsl(210, 60%, 98%);
+    --comment-color: hsl(211, 68%, 94%);
+    --shadow-color: hsl(205, 33%, 90%);
+    --text2-color: hsl(219, 14%, 63%);
+    --text-color: hsl(219, 12%, 42%);
+    --darkBlue-color: hsl(224, 21%, 14%);
+    --dot-color: hsl(1, 90%, 64%);
+    --blue-color: hsl(219, 85%, 26%);
 }
 
 @font-face {
@@ -16,16 +16,16 @@ body {
 }
 
 body {
-    background-color: hsl(210, 60%, 98%);
+    background-color: var(--body-color);
     font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 section {
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--section-color);
     margin: 50px 25vw 0 25vw;
     border-radius: 20px;
     padding: 40px 40px 0 40px;
-    box-shadow: 10px 10px 10px hsl(205, 33%, 90%);
+    box-shadow: 10px 10px 10px var(--shadow-color);
 }
 
 header {
@@ -50,17 +50,17 @@ h2 {
 }
 
 #not-counter {
-    background-color: hsl(219, 85%, 26%);
+    background-color: var(--blue-color);
     font-weight: bolder;
-    color: hsl(0, 0%, 100%);
+    color: var(--section-color);
     padding: 5px 12px 5px 12px;
     border-radius: 5px;
 }
 
 button {
     border: 0px;
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(219, 12%, 42%);
+    background-color: var(--section-color);
+    color: var(--text-color);
     margin: auto 0px auto 0px;
     padding: 0px 0px 10px 0px;
     font-size: 16px;
@@ -69,13 +69,13 @@ button {
 
 button:hover {
     font-weight: bolder;
-    color: hsl(219, 85%, 26%);
+    color: var(--blue-color)
     cursor: grab;
 }
 
 .not, .not-with-comment, .not-with-img {
-    background-color: hsl(210, 60%, 98%);
-    box-shadow: 1px 1px 3px hsl(205, 33%, 90%);;
+    background-color: var(--body-color);
+    box-shadow: 1px 1px 3px var(--shadow-color);
     display: grid;
     margin-bottom: 10px;
     padding: 20px;
@@ -110,11 +110,11 @@ button:hover {
 
 .not-msg p {
     margin: 0px 10px 0px 0px;
-    color: hsl(219, 12%, 42%);
+    color: var(--text-color);
 }
 
 .not-dot {
-    background-color: red;
+    background-color: var(--dot-color);
     width: 10px;
     height: 10px;
     margin: auto 0px auto 0px;
@@ -122,6 +122,31 @@ button:hover {
 }
 
 .not-time {
-    margin: 10px 10px 0px 0px;
-    color: hsl(219, 14%, 63%);
+    margin: 5px 10px 0px 0px;
+    color: var(--text2-color)
+}
+
+.not-comment {
+    grid-column: 2;
+    grid-row: 2;
+    color: var(--text-color);
+    background-color: var(--body-color);
+    border: 1px solid var(--text2-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.not-comment:hover {
+    border: 0px;
+    cursor: grab;
+    background-color: var(--comment-color);
+}
+
+.not-with-comment .not-img-id {
+    width: 100%;
+    height: auto;
+    grid-column: 1;
+    grid-row: 1/2;
+    margin: 0px auto auto auto;
 }
