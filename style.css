@@ -1,6 +1,11 @@
+/*Polices et variables*/
 @font-face {
     font-family: PlusJakarta;
     src: url(/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+:root {
+    --hover-blue: #07307d;
 }
 
 * {
@@ -19,8 +24,8 @@ header > h3 {
     width: 30%;
 }
 
-header > p:hover {
-    color: #07307d;
+header > p:hover, header > p:active {
+    color: var(--hover-blue);
     cursor: pointer;
 }
 
@@ -74,7 +79,7 @@ section {
 }
 
 .username:hover, .username:active{
-    color: #07307d;
+    color: var(--hover-blue);
     cursor: pointer;
 }
 
@@ -108,14 +113,17 @@ section {
 }
 
 .chess-club:hover{
-    color: #07307d;
+    color: var(--hover-blue);
     cursor: pointer;
 }
 
 .unread-marker {
-    color: red;
-    font-weight: 1500;
-    display: none;
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 1%;
 }
 
 /*Responsive*/
