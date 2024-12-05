@@ -54,6 +54,10 @@ section img{
     width: 60px;
 }
 
+section .img{
+    margin-right: 20px;
+}
+
 section p{
     font-weight: 500;
     color: #60626b;
@@ -69,3 +73,11 @@ section p{
 .time-information{
     color: #aaaeb7;
 }
+
+#message{
+    width: 80%;
+    border: 1px solid #eceef0;
+    margin-left: 60px;
+    padding: 20px;
+}
+
