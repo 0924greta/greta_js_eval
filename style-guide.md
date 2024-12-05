@@ -36,4 +36,3 @@ The designs were created to the following widths:
 
 - Family: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
 - Weights: 500, 800
-
