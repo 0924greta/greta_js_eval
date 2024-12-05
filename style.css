@@ -13,25 +13,42 @@
   font-weight: 800;
   font-style: normal;
 }
+
+:root {
+  --color-primary-red: hsl(1, 90%, 64%);
+  --color-primary-blue: hsl(219, 85%, 26%);
+
+  --neutral-white-main: hsl(0, 0%, 100%);
+  --neutral-grey: hsl(210, 60%, 98%);
+  /* Light grayish blue 1 ==== border p notif && border picture over && over p notif*/
+  --neutral-grey-border-over: hsl(211, 68%, 94%);
+  --neutral-grey-shadow: hsl(205, 33%, 90%);
+  --neutral-grey-datetime: hsl(219, 14%, 63%);
+  --neutral-grey-text: hsl(219, 12%, 42%);
+  --neutral-dark-blue: hsl(224, 21%, 14%);
+}
+
 /* Remove margin & padding by default + change font family */
 * {
   margin: 0px;
   padding: 0px;
   font-family: "Plus Jakarta Sans";
   font-weight: 500;
+  color: var(--neutral-grey-text);
 }
 /* For bold content */
 .bold-text {
   font-weight: 800 !important;
 }
 /* p content  */
-body p {
+body {
   font-size: 16px;
+  background-color: var(--neutral-grey);
 }
 a {
   font-weight: 800 !important;
   text-decoration: none;
-  color: hsl(219, 85%, 26%);
+  color: var(--neutral-dark-blue);
 }
 a:link {
 }
@@ -56,18 +73,38 @@ p {
 #container-main {
   width: 730px;
   margin: auto;
-  background-color: blue;
+  background-color: var(--neutral-white-main);
   margin-top: 40px;
   border-radius: 20px;
-  box-shadow: 0px 0px 50px grey;
+  box-shadow: 0px 0px 50px var(--neutral-grey-shadow);
 }
 #container-nav {
-  background-color: rgba(255, 255, 255, 0.5);
   margin-left: 30px;
   margin-right: 30px;
   height: 80px;
   display: grid;
+  align-items: center;
   grid-template-columns: auto 1fr auto;
+}
+#container-nav div {
+  width: fit-content;
+  font-weight: 800;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 11px;
+  padding-right: 11px;
+  margin: 15px;
+  color: var(--neutral-grey-shadow);
+  background-color: var(--color-primary-blue);
+  border-radius: 7px;
+}
+#container-nav span {
+  justify-self: flex-end;
+}
+h2 {
+  width: auto;
+  font-weight: 800;
+  color: var(--neutral-dark-blue);
 }
 
 #container-notif {
@@ -80,7 +117,7 @@ p {
   grid-template-columns: 45px 1fr;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--neutral-white-main);
   padding: 20px;
 }
 .icn-author {
@@ -89,11 +126,16 @@ p {
   border-radius: 50%;
   background-color: red;
 }
-.unread {
+.badge-unread {
   display: inline-block;
-  height: 10px;
-  width: 10px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
+  background-color: var(--color-primary-red);
+}
+.unread {
+  background-color: var(--neutral-grey);
+  border-radius: 10px;
 }
 /* MEDIA QUERIES */
 
@@ -108,36 +150,4 @@ p {
   body {
     background-color: rgb(0, 0, 255);
   }
-}
-
-colors {
-  /* ### Primary */
-  /* red ===== For red dot */
-  color: hsl(1, 90%, 64%);
-  color: #ff253f;
-  /* blue ===== bg badge && over link*/
-  color: hsl(219, 85%, 26%);
-  color: #1c117c;
-  /* ### Neutral */
-  /* white ===== div container main*/
-  color: hsl(0, 0%, 100%);
-  color: #ffffff;
-  /* Very light grayish blue ===== Background div main*/
-  color: hsl(210, 60%, 98%);
-  color: #f7fafd;
-  /* Light grayish blue 1 ==== border p notif && border picture over && over p notif*/
-  color: hsl(211, 68%, 94%);
-  color: #e4eefb;
-  /* Light grayish blue 2*/
-  color: hsl(205, 33%, 90%);
-  color: #dbe7ee;
-  /* Grayish blue: ===== datetime notif*/
-  color: hsl(219, 14%, 63%);
-  color: #929baf;
-  /* Dark grayish blue: ===== text*/
-  color: hsl(219, 12%, 42%);
-  color: #5e6578;
-  /* Very dark blue ===== Bold black text*/
-  color: hsl(224, 21%, 14%);
-  color: #1c1e2b;
 }
