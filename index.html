@@ -17,113 +17,85 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Div container main for/with :
-      - media query width
-      - bg-color : check doc
-      - shadow outter
-      - border radius (to calc)
-      - flex column -->
-    <!-- "Nav bar"
-      - Title
-      - Nb of unread
-      - "mark all as read" 
-      - height (to calc)
-    -->
-    <!-- Div container for notification
-      - flex column
-      - width
-      - gap -->
     <!-- DIV notification app container -->
-    <div id="container-main">
+    <main id="container-main">
       <!-- DIV Nav Bar -->
-      <div id="container-nav">
+      <header id="container-nav">
         <h2>Notifications</h2>
         <div>3</div>
-        <a href="#" class="mark-read-btn">Mark all as read</a>
-        </div>
+        <a href="#" class="mark-all-read-btn">Mark all as read</a>
+      </header>
       <!-- DIV notification container flex -->
-      <div id="container-notif">
+      <section id="container-notif">
         <!-- 1st notif. -->
-        <div class="notification unread">
+        <article class="notification unread">
           <img src="assets/images/avatar-mark-webber.webp" alt="Mark Webber">
           <div>
             <p>
               <a href="#" class="author">Mark Webber</a> reacted to your recent post
               <a href="#">My first tournament today!</a>
-              <div class="badge badge-unread"></div>
-              <div class="notif-date">1m ago</div>
+              <div class="badge badge-unread" title= "unread" alt="unread"></div>
+              <span class="notif-date">1m ago</span>
             </p>
-            
           </div>
-        </div>
+        </article>
         <!-- 2nd notif. -->
-        <div class="notification unread">
+        <article class="notification unread">
           <img src="assets/images/avatar-angela-gray.webp" alt="Angela Gray">
           <div>
             <p><a href="#" class="author">Angela Gray</a> followed you</p>
-            <div class="badge badge-unread"></div>
-            <div class="notif-date">5m ago</div>
+            <div class="badge badge-unread" title= "unread" alt="unread"></div>
+            <span class="notif-date">5m ago</span>
           </div>
-        </div>
-
+        </article>
         <!-- 3th notif. -->
-        <div class="notification unread">
+        <article class="notification unread">
           <img src="assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson">
           <div>
             <p><a href="#" class="author">Jacob Thompson</a> has joined your group <a href="#Chest2">Chess Club</a></p>
-            <div class="badge badge-unread"></div>
-            <div class="notif-date">1 day ago</div>
+            <div class="badge badge-unread" title= "unread" alt="unread"></div>
+            <span class="notif-date">1 day ago</span>
           </div>
-        </div>
-           
-
+        </article>
         <!-- 4th notif -->
-        <div class="notification">
+        <article class="notification">
           <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin">
           <div>
             <p><a href="#" class="author">Rizky Hasanuddin</a> sent you a private message</p>
-            <div class="notif-date">5 days ago</div>
-            <a href="#"><div class="text"><p>Hello, thanks for setting up the Chess Club. I've been a member for a
+            <span class="notif-date">5 days ago</span>
+            <a href="#"><span class="text"><p>Hello, thanks for setting up the Chess Club. I've been a member for a
               few weeks now and I'm already having lots of fun and improving my game.</p></div></a>
-          </div>
-        </div>
-        
-
+          </span>
+        </article>
         <!-- 5th notif. -->
-        <div class="notification picture-preview">
+        <article class="notification picture-preview">
           <img src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith">
           <div>
             <p><a href="#" class="author">Kimberly Smith</a> commented on your picture</p>
-            
-            <div class="notif-date">1 week ago</div>
-            
+            <span class="notif-date">1 week ago</span>
           </div>
           <a href="#"><img src="assets/images/image-chess.webp" alt="Your picture" class="picture"></a>
-        </div>
+        </article>
         <!-- 6th notif -->
-        <div class="notification">
+        <article class="notification">
           <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson">
           <div>
             <p><a href="#" class="author">Nathan Peterson</a> reacted to your recent post <a href="#">5 end-game strategies to
               increase your win rate</a></p>
-              <div class="notif-date">2 weeks ago</div>
-            
+              <span class="notif-date">2 weeks ago</span>
           </div>
-        </div>
-           
-
+        </article>
         <!-- 7th notif -->
-        <div class="notification">
+        <article class="notification">
         <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim">
           <div>
-            <p><a href="#" class="author">Anna Kim</a> left the group <a href="#Chest">Chess Club</a></p>
-            <div class="notif-date">2 weeks ago</div>
+            <p><a href="#" class="author">Anna Kim</a> left the group <a href="#Chest2">Chess Club</a></p>
+            <span class="notif-date">2 weeks ago</span>
             
           </div>
-        </div>
-          
-      </div>
-    </div>
+        </article>
+      </section>
+    </main>
 
     <div class="attribution">
       Challenge by
