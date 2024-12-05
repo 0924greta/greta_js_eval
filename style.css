@@ -65,7 +65,7 @@ body {
     background-color: var(--neutral-white-main);
   }
   body {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 /* Desktop : optimised for 1440px */
@@ -98,18 +98,38 @@ p {
   align-items: center;
   grid-template-columns: auto 1fr auto;
 }
-#container-nav div {
-  width: fit-content;
-  font-weight: 800;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 11px;
-  padding-right: 11px;
-  margin: 15px;
-  color: var(--neutral-grey-shadow);
-  background-color: var(--color-primary-blue);
-  border-radius: 7px;
+
+/* Mobile : optimised for 375px */
+@media (max-width: 730px) {
+  #container-nav div {
+    width: fit-content;
+    font-weight: 800;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 15px;
+    color: var(--neutral-grey-shadow);
+    background-color: var(--color-primary-blue);
+    border-radius: 7px;
+  }
 }
+/* Desktop : optimised for 1440px */
+@media (min-width: 730px) {
+  #container-nav div {
+    width: fit-content;
+    font-weight: 800;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin: 15px;
+    color: var(--neutral-grey-shadow);
+    background-color: var(--color-primary-blue);
+    border-radius: 7px;
+  }
+}
+
 #container-nav span {
   justify-self: flex-end;
 }
@@ -119,11 +139,20 @@ h2 {
   color: var(--neutral-dark-blue) !important;
 }
 
-#container-notif {
-  margin-left: 30px;
-  margin-right: 30px;
+/* Mobile : optimised for 375px */
+@media (max-width: 730px) {
+  #container-notif {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
-
+/* Desktop : optimised for 1440px */
+@media (min-width: 730px) {
+  #container-notif {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
 .notification {
   display: grid;
   grid-template-columns: 45px 1fr;
@@ -162,6 +191,17 @@ h2 {
   margin-bottom: 10px;
   display: block;
   font-weight: 500 !important;
+}
+@media (max-width: 730px) {
+  .text {
+    border: 1px solid var(--neutral-grey-border-over);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500 !important;
+  }
 }
 .text:hover {
   background-color: var(--neutral-grey-border-over);
