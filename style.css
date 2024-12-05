@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'Plusjakarta sans'; 
     src: url('assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal; /* Optionnel : bold, lighter, etc. */
+    font-weight: bolder; /* Optionnel : bold, lighter, etc. */
     font-style: normal; /* Optionnel : italic, oblique, etc. */
 }
 
@@ -14,10 +14,127 @@
 }
 body{
     font-family:Plusjakarta sans ;
+    font-weight: 400;
     max-width: 1440px;
-    padding: 25px;
+    height: 100%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aquamarine;
 }
 
 /*Component styles */
 
 
+.modal-context{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-width: 1500px;
+    background-color: hsl(210, 60%, 98%);
+}
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    max-width: 700px;
+    border-radius: 15px;
+    background-color:hsl(0, 0%, 100%) ;
+    
+
+}
+
+.title-counter-all-read{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    
+}
+
+#title-counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#notif-counter{
+    width: 25px;
+    height: 23px;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%) ;
+    background-color: hsl(224, 21%, 14%);
+}
+.card{
+    margin: 3px 10px 3px 10px ;
+    padding: 15px;
+    display: flex;
+    gap: 2px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: hsl(211, 68%, 94%);
+}
+.avatar-picture{
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+}
+.user-name-timer{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+ 
+.p-mark{
+    
+    width: 400px;
+    display: flex;
+    gap: 10px;
+    
+}
+.notification{
+    width: 100%;
+    display: flex;
+    flex-wrap:nowrap;
+color: hsl(205, 33%, 90%);
+}
+
+.span-chess{
+    font-weight: 800;
+color: hsl(219, 12%, 42%)
+}
+.other-span{
+    font-weight: 700;
+    color: hsl(219, 12%, 42%) ;
+}
+
+/*Particular styles*/
+#card-4{ 
+display: flex;
+flex-direction: column;
+}
+
+.notif-header{
+    display: flex;
+    gap: 10px;
+}
+
+.message{
+    max-width: 500px;
+    margin: 10px;
+    padding: 15px;
+    border: solid 2px hsl(205, 33%, 90%);
+}
+
+#posted-picture{
+    max-width: 60px;
+    max-width: 60px;
+    display: flex;
+    justify-self: flex-end;
+margin: 20px;
+}
