@@ -46,6 +46,7 @@ p {
 }
 
 h2 {
+    font-size: 24px;
     margin: auto 0px auto 0px;
 }
 
@@ -69,7 +70,7 @@ button {
 
 button:hover {
     font-weight: bolder;
-    color: var(--blue-color)
+    color: var(--blue-color);
     cursor: grab;
 }
 
@@ -115,10 +116,10 @@ button:hover {
 
 .not-dot {
     background-color: var(--dot-color);
-    width: 10px;
-    height: 10px;
+    width: 0.5vw;
+    height: 0.5vw;
     margin: auto 0px auto 0px;
-    border-radius: 10px;
+    border-radius: 0.5vw;
 }
 
 .not-time {
@@ -164,3 +165,90 @@ button:hover {
     height: auto;
     margin: 0px auto auto auto;
 }
+
+a {
+    text-decoration: none;
+    font-weight: 800;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.not-name-user {
+    color: var(--darkBlue-color);
+}
+
+.not-page-user {
+    color: var(--text-color);
+}
+
+a:hover{
+    color: var(--blue-color);
+}
+
+
+
+@media screen and (max-width: 375px) {
+    section {
+        margin: -10px -10px 0 -10px;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px var(--shadow-color);
+        padding: 20px 15px 0 15px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 0px 0px 15px 0px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .not, .not-with-comment {
+        grid-template-columns: 50px auto;
+    }
+    
+    .not-with-img{
+        grid-template-columns: 50px auto 50px;
+    }
+
+    .not, .not-with-comment, .not-with-img {
+        padding: 15px;
+    }
+
+    .not-comment {
+        font-size: 14px;
+    }
+
+    .not-main {
+        margin-left: 10px;
+    }
+
+    .not-comment {
+        margin-left: 10px;
+    }
+
+    .not-msg {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .not-msg p {
+        margin: 0px 1px 0px 0px;
+    }
+
+    .not-dot {
+        width: 10px;
+        height: 10px;
+        margin: auto 0px auto 0px;
+        border-radius: 10px;
+    }
+    
+  }
+  
