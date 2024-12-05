@@ -11,14 +11,13 @@
   display: flex;
   justify-content: center;
 }
-/* 1. Centrer le body */
 body {
-  display: flex; /* Définit un modèle flexbox pour le body */
-  justify-content: center; /* Centrer horizontalement */
+  display: flex;
+  justify-content: center;
   align-items: flex-start;
   background-color: hsl(211, 68%, 94%);
   font-family: "Plus Jakarta Sans", sans-serif;
-  margin: 0; /* Enlever les marges par défaut */
+  margin: 0;
 }
 section {
   display: flex;
@@ -27,14 +26,14 @@ section {
   padding: 10px;
   border-radius: 10px;
   gap: 1px;
-  width: 60%; /* Ou ajuster à la taille souhaitée */
-  box-sizing: border-box; /* Pour inclure le padding dans la largeur */
-  margin: 0; /* Pas besoin de margin auto ici, on a déjà centré le body */
+  width: 60%;
+  box-sizing: border-box;
+  margin: 0;
 }
 header {
-  display: flex; /* Utilisation du modèle flexbox */
-  justify-content: space-between; /* Sépare les éléments à gauche et à droite */
-  align-items: center; /* Si tu veux centrer verticalement le contenu */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-left: 10px;
   padding-right: 10px;
   background-color: white;
@@ -48,12 +47,12 @@ header {
 
 .activeNotif {
   flex-shrink: 0;
-  display: inline-flex; /* Ou utiliser inline-block si nécessaire */
+  display: inline-flex;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background-color: hsl(1, 90%, 64%);
-  margin-left: 5px; /* Pour séparer un peu le span du texte */
+  margin-left: 5px;
 }
 
 a {
