@@ -9,7 +9,13 @@ notArray = notArray.concat(divNot);
 notArray = notArray.concat(divNotWithImg);
 notArray = notArray.concat(divNotWithComment);
 UpdateStatusNotification();
+sortNotification();
 
+
+
+function sortDiv(array) {
+
+}
 
 function UpdateStatusNotification(){
     let counterNotificationRead = 0;
@@ -54,3 +60,82 @@ notArray.forEach(div => div.addEventListener('click', (event) => {
     UpdateStatusNotification();
 }));
 
+
+
+
+
+function sortNotification(){
+    notArray.sort((a, b) => a.firstElementChild.nextElementSibling.lastElementChild.innerText - b.firstElementChild.nextElementSibling.lastElementChild.innerText);
+
+    for (let index = 0; index < notArray.length; index++) {
+        notArray[index].firstElementChild.nextElementSibling.lastElementChild.innerText = ConvertTimeinText(Number(notArray[index].firstElementChild.nextElementSibling.lastElementChild.innerText));
+    document.querySelector('section').removeChild(document.querySelector('section').lastElementChild)
+
+    }
+    for (let index = 0; index < notArray.length; index++) {
+        document.querySelector('section').appendChild(notArray[index]);
+
+    }
+}
+
+
+
+
+function ConvertTimeinText(time){
+    if (time < 1) {
+        return "less 1m"
+    }
+    else if(time >= 1 && time < 60){
+        return String(time)+"m ago"
+    }
+    else if (time >= 60 && time < 1440)
+    {
+        if(Math.round(time/60) > 1)
+        {
+            return String(Math.round(time/60))+" hours ago"
+        }
+        else {
+            return String(Math.round(time/60))+" hour ago"
+        }
+    }
+    else if (time >= 1440 && time < 10080)
+    {
+        if(Math.round(time/1440) > 1)
+            {
+                return String(Math.round(time/1440))+" days ago"
+            }
+            else {
+                return String(Math.round(time/1440))+" day ago"
+            }
+    }
+    else if (time >= 10080 && time < 40320)
+    {
+        if(Math.round(time/10080) > 1)
+            {
+                return String(Math.round(time/10080))+" weeks ago"
+            }
+            else {
+                return String(Math.round(time/10080))+" week ago"
+            }
+    }
+    else if (time >= 40320 && time < 483840)
+    {
+        if(Math.round(time/40320) > 1)
+            {
+                return String(Math.round(time/40320))+" mounths ago"
+            }
+            else {
+                return String(Math.round(time/40320))+" mount ago"
+            }
+    }
+    else if (time >= 483840)
+    {
+        if(Math.round(time/483840) > 1)
+            {
+                return String(Math.round(time/483840))+" years ago"
+            }
+            else {
+                return String(Math.round(time/483840))+" year ago"
+            }
+    }
+}
