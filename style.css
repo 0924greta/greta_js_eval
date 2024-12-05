@@ -73,6 +73,24 @@ body {
 .notification-item.unread {
     background-color: #F6FAFD;
     border-radius: 5px;
+    position: relative;
+}
+
+.notification-item.unread::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 79%;
+    right: 10px; 
+    width: 10px; 
+    height: 10px; 
+    background-color: red;
+    border-radius: 50%;
+    display: block;
+  }
+  
+.notification-item:not(.unread)::before {
+    display: none; 
 }
 
 .notification-item p {
@@ -96,7 +114,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 4px;
-    margin-left: 130px;
+    margin-left: 150px;
 }
 
 /* Avatar styles */
