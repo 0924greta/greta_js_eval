@@ -9,13 +9,6 @@ function updateNotificationCount() {
     ".notification-item.unread"
   );
   notificationCount.textContent = unreadNotifications.length;
-
-  // Hide the counter if no unread notifications
-  if (unreadNotifications.length === 0) {
-    notificationCount.style.display = "none";
-  } else {
-    notificationCount.style.display = "inline-block";
-  }
 }
 
 // Function to mark a single notification as read
