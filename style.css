@@ -8,18 +8,33 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    
 }
 
-
-
+/* Colors */
+:root {
+    --background: hsl(0, 0%, 100%);
+    --color-header: hsl(219, 85%, 26%);
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --background-notifications-unread: #F6FAFD;
+    --mark-read-button-active : #B1B1B9;
+    --notification-symbol: red;
+    --highlight: #415A79;
+    --highlight-active: #80838D;
+    --time: hsl(219, 14%, 63%);
+    --border-message-box: #F2F2F3;
+    --color-message-box: hsl(219, 12%, 42%);
+    --message-box-hover: #E5EFF9;
+  }
+  
 
 /* Container style */
 .notifications-container {
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--background);
     width: 90%;
     max-width: 700px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px var(--box-shadow);
     padding: 20px;
     box-sizing: border-box;
     margin-top: 5em;
@@ -38,8 +53,8 @@ body {
 }
 
 .notification-count {
-    background-color: hsl(219, 85%, 26%);
-    color: hsl(0, 0%, 100%);
+    background-color: var(--color-header);
+    color: var(--background);
     padding: 4px 10px;
     border-radius: 25%;
     font-size: 16px;
@@ -49,7 +64,7 @@ body {
 .mark-read-btn {
     background: none;
     border: none;
-    color: hsl(219, 85%, 26%);
+    color: var(--color-header);
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
@@ -58,7 +73,7 @@ body {
 }
 
 .mark-read-btn:active {
-    color: #B1B1B9;
+    color: var(--mark-read-button-active);
 }
 
 
@@ -82,7 +97,7 @@ body {
 }
 
 .notification-item.unread {
-    background-color: #F6FAFD;
+    background-color: var(--background-notifications-unread);
     border-radius: 5px;
     position: relative;
 }
@@ -90,7 +105,7 @@ body {
 .notification-symbol {
     height: 10px;
     width: 10px;
-    background-color: red;
+    background-color: var(--notification-symbol);
     border-radius: 50%;
     display: inline-block;
     margin-left: 10px;
@@ -105,20 +120,20 @@ body {
 }
 
 .highlight {
-    color: #415A79;
+    color: var(--highlight);
     font-weight: 900;
     text-decoration: none
 }
 
 .highlight:active {
-    color: #80838D;
+    color: var(--highlight-active);
 }
 
 
 .notification-item .time {
     display: block;
     font-size: 16px;
-    color: hsl(219, 14%, 63%);
+    color: var(--time);
     margin-top: 5px;
 
 }
@@ -144,19 +159,19 @@ body {
 
 /* Message box styles */
 .message-box {
-    background-color: #FFFFFF;
-    border: 1px solid #F2F2F3;
+    background-color: var(--background);
+    border: 1px solid var(--border-message-box);
     padding: 10px;
     margin-top: 15px;
     border-radius: 4px;
     font-size: 16px;
-    color: hsl(219, 12%, 42%);
+    color: var(--color-message-box);
     cursor: pointer;
     
 }
 
 .message-box:hover {
-    background-color: #E5EFF9;
+    background-color: var(--message-box-hover);
 }    
 
 
