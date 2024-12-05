@@ -1,7 +1,22 @@
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("assets/fonts/PlusJakartaSans-VariableFont_wght.ttf")
+      format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("assets/fonts/PlusJakartaSans-VariableFont_wght.ttf")
+      format("truetype");
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  body {
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size : 16px;
-    font-weight: 500,800; /* demander ici */
     background-color: hsl(210, 60%, 98%);
     margin: 0;
     padding: 0;
@@ -9,9 +24,9 @@ body {
   
   .notifications-container {
     width: 90%;
-    max-width: 600px;
+    max-width: 650px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 10px 25px 0px 25px;
     background-color: hsl(0, 0%, 100%);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -20,6 +35,12 @@ body {
   #heading {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  #title-and-count{
+    display: flex;
+    flex-direction: row;
     align-items: center;
   }
   
@@ -32,16 +53,18 @@ body {
     background-color: hsl(219, 85%, 26%);
     border: 1px solid hsl(219, 85%, 26%);
     color: white;
-    font-size: 1.2rem;
+    font-size: 16px;
     border-radius: 5px;
-    padding: 2px 10px;
-    
+    padding: 3px 8px 2px 8px;
+    margin-left: 8px;
+    margin-bottom: 3px;
     }
   
   #mark-all-read {
+    font-size: 1em;
     border: none;
     background: none;
-    color: hsl(219, 14%, 63%);
+    color: hsl(219, 12%, 42%);
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -88,35 +111,38 @@ body {
   }
   
   .notification p {
-    font-size: 1rem;
-    margin: 0 0 5px;
-    line-height: 1.5;
+    margin-bottom: 2px;
+    line-height: 1.2;
   }
   
   .notification span {
-    font-size: 0.8rem;
     color: hsl(219, 14%, 63%);
   }
   
   .message-preview {
     margin-top: 10px;
-    padding: 10px;
+    padding: 15px;
     background-color: hsl(0, 0%, 100%);
     border: 1px solid hsl(219, 14%, 63%);
     border-radius: 5px;
   }
   
-  .message-preview:hover{
+  .message-preview:hover {
     background-color: hsl(205, 33%, 90%);
+    cursor: pointer;
   }
 
   .image-chess {
-    width: 100px;
+    width: 40px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 5px;
     margin-left: 15px;
   }
   
+  .image-chess:hover {
+    cursor: pointer;
+  }
+
   p {
     color: hsl(219, 12%, 42%);
     margin: 0;
@@ -132,16 +158,43 @@ body {
 
   b {
     color: hsl(219, 12%, 42%)
-
   }
+
+  b:hover, strong:hover{
+    cursor: pointer;
+    color: hsl(219, 85%, 26%);
+  }
+
   .red-point{
   height: 10px;
   width: 10px;
-  background-color: red;
+  background-color: hsl(1, 90%, 64%);
   border-radius: 50%;
   display: inline-block;
   }
   
   .bold-blue {
     color: hsl(219, 85%, 26%);
+  }
+
+  .attribution{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  @media screen and (max-width: 425px) {
+    body{
+        font-size: 14px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    #notification-count{
+        font-size: 13px;
+        border-radius: 5px;
+        padding: 3px 6px 2px 6px;
+        margin-left: 5px;
+        margin-bottom: 3px;
+    }
   }
