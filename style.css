@@ -44,6 +44,13 @@ section{
     flex-direction: row;
 }
 
+section > img:last-of-type{
+    margin-top: 20px;
+    margin-left: 150px;
+    width: 50px;
+    height: 50px;
+}
+
 
 strong{
     color: #1a336c;
