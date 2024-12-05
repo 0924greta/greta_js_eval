@@ -23,9 +23,9 @@
 # ...à l'exception du fichier `.keep`
 !/log/.keep
 
-assets/
-design/
-screen/
+/assets
+/design
+/screen
 style-guide.md
 README.md
 
