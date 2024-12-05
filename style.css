@@ -122,6 +122,13 @@ header h1 {
   background-color: var(--light-grayish-blue-2);
 }
 
+
+strong:hover {
+  cursor: pointer;
+  color: var(--blue);
+}
+
+
 .private-message {
   border: 1px solid rgb(215, 215, 215);
   border-radius: 10px;
@@ -129,6 +136,7 @@ header h1 {
   width: 70%;
 }
 
+/* Footer */
 footer {
   display: flex;
   justify-content: center; /* Centers content horizontally */
