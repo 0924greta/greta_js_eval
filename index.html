@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
     <link
       rel="icon"
@@ -28,97 +31,108 @@
     </style>
   </head>
   <header>
-    <h2>Notifications</h2>
-
-    <label id="delNotif"><strong><a href="#">Mark all as read</a></strong></label>
+    <div id="totalNotif">
+      <h2>Notifications</h2>
+      <h2 id="nbNotif"></h2>
+    </div>
+    <div>
+      <label id="delNotif"
+        ><strong><a href="#">Mark all as read</a></strong></label
+      >
+    </div>
   </header>
   <body>
     <section>
+      <div class="unRead notif">
+        <img src="assets/images/avatar-mark-webber.webp" alt="" />
+        <div class="messCont">
+          <p>
+            <strong><a href="#">Mark Webber </a></strong> reacted to your recent
+            post My first tournament today! <div class="activeNotif"></div>
+          </p>
+          <span>1m ago</span>
+        </div>
+      </div>
 
-
-      <p><a href="#">
-        <img src="assets/images/avatar-mark-webber.webp" alt="" /><strong
-          >Mark Webber</a></strong
-        >
-        reacted to your recent post My first tournament today! <br />1m ago
-      </p>
-
-      <p>
+      <div class="unRead notif">
         <img src="assets/images/avatar-angela-gray.webp" alt="" />
-        <strong><a href="#">Angela Gray</a></strong> followed you <br />5m ago
-      </p>
+        <div class="messCont">
+          <p>
+            <strong><a href="#">Angela Gray</a></strong> followed you
+          </p>
+          <span>5m ago</span>
+        </div>
+      </div>
 
-      <p>
-        <strong
-          ><img src="assets/images/avatar-jacob-thompson.webp" alt="" /><a
-            href="#"
-            >Jacob Thompson</a
-          ></strong
-        >
-        has joined your group <a href="#">Chess Club </a><br />1 day ago
-      </p>
-
-      <p>
-        <strong
-          ><img src="assets/images/avatar-rizky-hasanuddin.webp" alt="" /><a
-            href="#"
-            >Rizky Hasanuddin</a
-          ></strong
-        >
-        sent you a private message <br />
-        5 days ago <br />
-        <label name="message" id=""
-          ><strong
-            ><a href="#">
-              Hello, thanks for setting up the Chess Club. I've been a member
-              for a few weeks now and I'm already having lots of fun and
-              improving my game.</a
-            ></strong
+      <div class="unRead notif">
+        <img src="assets/images/avatar-jacob-thompson.webp" alt="" />
+        <div class="messCont">
+          <p
+            ><strong><a href="#">Jacob Thompson</a></strong> has joined your
+            group <a href="#">Chess Club </a><p><span>1 day ago</span
           >
-        </label>
-      </p>
+        </div>
+      </div>
 
-      <p>
-        <strong
-          ><img src="assets/images/avatar-kimberly-smith.webp" alt="" /><a
-            href="#"
-            >Kimberly Smith</a
-          ></strong
-        >
-        commented on your picture
-        <br />
-        1 week ago <img src="assets/images/image-chess.webp" alt="">
-      </p>
+      <div class="unRead notif">
+        <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="" />
+        <div class="messCont">
+          <div>
+            <strong><a href="#">Rizky Hasanuddin</a></strong> sent you a
+            private message <br /></div>
+            <span> 5 days ago <br /></span>
 
-      <p>
-        <strong
-          ><img src="assets/images/avatar-nathan-peterson.webp" alt="" /><a
-            href="#"
-            >Nathan Peterson</a
-          ></strong
-        >
-        reacted to your recent post 5 end-game strategies to increase your win
-        rate <br />
-        2 weeks ago
-      </p>
+            <p id="message "><a href="#"
+              >
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.</a
+                ></p
+              >
+          </span>
+        </div>
+      </div>
 
-      <p>
-        <strong
-          ><img src="assets/images/avatar-anna-kim.webp" alt="" /><a href="#"
-            >Anna Kim</a
-          ></strong
-        >
-        left the group Chess Club
-        <br />
-        2 weeks ago
-      </p>
+      <div class="unRead notif">
+        <img src="assets/images/avatar-kimberly-smith.webp" alt="" />
+        <div class="messCont">
+          <p>
+            <strong><a href="#">Kimberly Smith</a></strong> commented on your
+            picture
+          </p>
+          <span>1 week ago</span>
+        </div>
+        <img id="picture" src="assets/images/image-chess.webp" alt="" />
+      </div>
 
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Martin</a>.
+      <div class="unRead notif">
+        <img src="assets/images/avatar-nathan-peterson.webp" alt="" />
+        <div class="messCont">
+          <span
+            ><strong><a href="#">Nathan Peterson</a></strong> reacted to your
+            recent post 5 end-game strategies to increase your win rate <br />
+            2 weeks ago
+          </span>
+        </div>
+      </div>
+
+      <div class="unRead notif">
+        <img src="assets/images/avatar-anna-kim.webp" alt="" />
+        <div class="messCont">
+          <span
+            ><strong><a href="#">Anna Kim</a></strong>
+            left the group Chess Club
+            <br />
+            2 weeks ago</span
+          >
+        </div>
       </div>
     </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Martin</a>.
+    </div>
   </body>
 </html>
