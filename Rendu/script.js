@@ -33,14 +33,26 @@ UpdataStatusNotification();
 
 
 function MarkAllRead(){
-    notArray.forEach(div => div.setAttribute('status', 'read'));
+    if (buttonMarkAllRead.innerText === "Mark all as read") {
+        buttonMarkAllRead.innerText = "Mark all as unread";
+        notArray.forEach(div => div.setAttribute('status', 'read'));
+    }
+    else {
+        buttonMarkAllRead.innerText = "Mark all as read";
+        notArray.forEach(div => div.setAttribute('status', 'unread'));
+    }
     UpdataStatusNotification();
 }
 buttonMarkAllRead.addEventListener('click', MarkAllRead);
 
 
 notArray.forEach(div => div.addEventListener('click', (event) => {
-    event.target.setAttribute('status', 'read');
+    if(event.target.getAttribute('status') === "unread") {
+        event.target.setAttribute('status', 'read');
+    }
+    else{
+        event.target.setAttribute('status', 'unread');
+    }
     UpdataStatusNotification();
 }));
 
