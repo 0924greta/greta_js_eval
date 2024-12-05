@@ -21,14 +21,18 @@
      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- ------ -->
     <!-- Header -->
-
+    <!-- ------ -->
     <div class="container">
       <header>
         <h1>Notifications <span class="notification-count">3</span></h1>
         <button class="mark-all-read">Mark all as read</button>
       </header>
     
+    <!-- ------ -->
+    <!-- Main -->
+    <!-- ------ -->
       <main>
         <div class="notification unread">
           <span class="status-dot"></span>
@@ -60,17 +64,16 @@
             Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
           </p>
         </div>
-    
-
-        <!-- TODO : add picture /image-chess.png -->
-        <div class="notification unread chess-notification">
+      
+        <div class="notification unread">
+          <div class="notification unread-container">
           <span class="status-dot"></span>
           <img src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith" class="profile-pic">
           <p><strong>Kimberly Smith</strong> commented on your picture</p>
           <span class="time">1 week ago</span>
-          <img src="assets/images/image-chess.webp" alt="New Image" class="right-image">
+          </div>
         </div>
-
+      
         <div class="notification unread">
           <span class="status-dot"></span>
           <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson" class="profile-pic">
@@ -84,7 +87,10 @@
           <p><strong>Anna Kim</strong> left the group <strong>Chess Club</strong></p>
           <span class="time">2 weeks ago</span>
         </div>
+
+    <!-- ------ -->
     <!-- Footer -->
+    <!-- ------ -->
     <footer>
       <div class="attribution">
         Challenge by

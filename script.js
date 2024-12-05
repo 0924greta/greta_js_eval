@@ -1,16 +1,16 @@
-// Sélection des éléments importants
+// Select important elements
 const notifications = document.querySelectorAll(".notification");
 const notificationCountEl = document.querySelector(".notification-count");
 const markAllReadBtn = document.querySelector(".mark-all-read");
 const statutDot = document.querySelector(".status-dot");
 
-// Fonction pour mettre à jour le compteur
+// Function to update the notification count
 function updateNotificationCount() {
   const unreadNotifications = document.querySelectorAll(".notification.unread");
   notificationCountEl.textContent = unreadNotifications.length;
 }
 
-// Fonction pour marquer une notification comme lue
+// Function to mark a notification as read
 function markAsRead(notification) {
   if (notification.classList.contains("unread")) {
     notification.classList.remove("unread");
@@ -18,25 +18,25 @@ function markAsRead(notification) {
   }
 }
 
-// Ajouter un événement 'click' à chaque notification
+// Add a 'click' event to each notification
 notifications.forEach((notification) => {
   notification.addEventListener("click", () => {
-    // Sélectionner le span avec la classe 'status-dot' dans la notification cliquée
+    // Select the span with the 'status-dot' class in the clicked notification
     const statusDot = notification.querySelector(".status-dot");
 
-    // Rendre le 'status-dot' invisible
+    // Hide the 'status-dot'
     if (statusDot) {
       statusDot.style.display = "none";
     }
   });
 });
 
-// Ajouter un écouteur à chaque notification pour la marquer comme lue
+// Add an event listener to each notification to mark it as read
 notifications.forEach((notification) => {
   notification.addEventListener("click", () => markAsRead(notification));
 });
 
-// Marquer toutes les notifications comme lues
+// Mark all notifications as read
 markAllReadBtn.addEventListener("click", () => {
   notifications.forEach((notification) =>
     notification.classList.remove("unread")
@@ -44,19 +44,18 @@ markAllReadBtn.addEventListener("click", () => {
   updateNotificationCount();
 });
 
-// Marquer toutes les 'status-dot' comme lues
-// Ajouter un événement 'click' au bouton
+// Mark all 'status-dot' as read
+// Add a 'click' event to the button
 markAllReadBtn.addEventListener("click", () => {
-  // Pour chaque notification, masquer la 'status-dot'
+  // For each notification, hide the 'status-dot'
   notifications.forEach((notification) => {
     const statusDot = notification.querySelector('.status-dot');
     if (statusDot) {
-      // Masquer le status-dot en utilisant style
+      // Hide the status-dot using style
       statusDot.style.display = 'none';
     }
   });
 });
 
-
-// Initialiser le compteur
+// Initialize the notification count
 updateNotificationCount();

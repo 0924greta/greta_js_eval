@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-/* Variables de couleur */
+/* Color Variables */
 :root {
   --red: hsl(1, 90%, 64%);
   --blue: hsl(219, 85%, 26%);
@@ -40,7 +40,7 @@ body {
   box-shadow: 2px 2px 2px var(--very-dark-blue);
 }
 
-/* En-tête */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -115,21 +115,7 @@ header h1 {
   font-size: 14px;
 }
 
-.chess-notification {
-  position: relative;
-}
-
-.chess-notification .right-image {
-  position: absolute;
-  right: 10px;  /* Ajuste la position de l'image à droite */
-  top: 50%;     /* Place l'image verticalement centré */
-  transform: translateY(-50%); /* Centrer l'image verticalement */
-  width: 70px;  /* Ajuste la taille de l'image */
-  height: auto;
-  object-fit:cover;
-}
-
-/* Effet Hover */
+/* Hover Effect */
 .notification:hover {
   background-color: var(--light-grayish-blue-2);
 }
@@ -143,36 +129,31 @@ header h1 {
 
 footer {
   display: flex;
-  justify-content: center; /* Centre le contenu horizontalement */
-  align-items: center; /* Centre le contenu verticalement */
-  background-color: var(
-    --white
-  ); /* Arrière-plan du footer pour l'harmoniser avec le reste */
-  padding: 20px 0; /* Espacement autour du texte */
-  box-shadow: 0 -2px 2px var(--very-dark-blue); /* Ajoute une légère ombre pour séparer visuellement du contenu principal */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  background-color: var(--white); /* Footer background to match the rest */
+  padding: 20px 0; /* Spacing around text */
+  box-shadow: 0 -2px 2px var(--very-dark-blue); /* Adds slight shadow to visually separate from main content */
 }
 
 .attribution {
-  text-align: center; /* Assure que le texte soit centré */
+  text-align: center; /* Ensures text is centered */
   font-size: 14px;
-  color: var(
-    --grayish-blue
-  ); /* Utilisation de la couleur grise pour l'attribution */
+  color: var(--grayish-blue); /* Uses grayish color for attribution */
 }
 
 .attribution a {
-  color: var(--blue); /* Lien avec la couleur bleue de la charte */
-  text-decoration: none; /* Supprime le souligné des liens */
+  color: var(--blue); /* Link with blue color from the palette */
+  text-decoration: none; /* Removes underline from links */
 }
 
 .attribution a:hover {
-  color: var(--red); /* Effet de survol rouge pour les liens */
+  color: var(--red); /* Red hover effect for links */
 }
 
 /* Responsive */
-/* Responsive - Mobile (375px et moins) */
-/* Responsive - Mobile (375px et moins) */
-@media (max-width: 575px) {
+/* Responsive - Mobile (375px and below) */
+@media (max-width: 375px) {
   body {
     font-size: 14px;
   }
@@ -182,9 +163,9 @@ footer {
   }
 
   header {
-    flex-direction: row; /* Disposition en ligne pour garder le titre et le bouton côte à côte */
-    justify-content: space-between; /* Espacement égal entre le titre et le bouton */
-    align-items: center; /* Alignement centré */
+    flex-direction: row; /* Row layout to keep title and button side by side */
+    justify-content: space-between; /* Equal spacing between title and button */
+    align-items: center; /* Center alignment */
     margin: 1%;
   }
 
@@ -194,7 +175,7 @@ footer {
   }
 
   .notification {
-    flex-direction: column; /* Notifications empilées en colonne */
+    flex-direction: column; /* Notifications stacked in column */
   }
 
   .notification p {
@@ -202,12 +183,12 @@ footer {
   }
 
   .notification .time {
-    font-size: 12px; /* Taille plus petite pour la time */
+    font-size: 12px; /* Smaller font size for time */
   }
 
   .mark-all-read {
-    margin-top: 0; /* Pas d'espacement supplémentaire entre le bouton et les notifications */
-    font-size: 14px; /* Taille légèrement plus grande sur mobile */
+    margin-top: 0; /* No extra spacing between the button and notifications */
+    font-size: 14px; /* Slightly larger font size on mobile */
     color: var(--grayish-blue);
   }
 }
