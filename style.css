@@ -6,6 +6,18 @@
     font-weight: bolder; /* Optionnel : bold, lighter, etc. */
     font-style: normal; /* Optionnel : italic, oblique, etc. */
 }
+/**:root{
+
+    -- Red: hsl(1, 90%, 64%);
+    -- Blue: hsl(219, 85%, 26%);
+    -- White: hsl(0, 0%, 100%);
+    -- Very light grayish blue: hsl(210, 60%, 98%);
+    -- Light grayish blue 1: hsl(211, 68%, 94%);
+    -- Light grayish blue 2: hsl(205, 33%, 90%);
+    -- Grayish blue: hsl(219, 14%, 63%);
+    -- Dark grayish blue: hsl(219, 12%, 42%);
+    -- Very dark blue: hsl(224, 21%, 14%);
+}**/
 
 *{
     margin: 0;
@@ -20,6 +32,7 @@ body{
     padding: 60px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: aquamarine;
 }
@@ -28,13 +41,19 @@ body{
 
 
 .modal-context{
+
     padding: 20px;
     display: flex;
     justify-content: center;
+    justify-self: center;
+    align-self: center;
     min-width: 1500px;
     background-color: hsl(210, 60%, 98%);
 }
+
+
 .modal{
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,14 +67,22 @@ body{
 }
 
 .title-counter-all-read{
+
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 30px;
     
 }
+#all-read{
+    color: hsl(219, 12%, 42%)
+}
+#all-read:hover{
+    color: hsl(224, 21%, 14%);
+}
 
 #title-counter{
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,20 +103,46 @@ body{
     gap: 2px;
     width: 100%;
     border-radius: 10px;
-    background-color: hsl(211, 68%, 94%);
+    /*background-color: hsl(211, 68%, 94%);*/
 }
+
+
+
 .avatar-picture{
     margin: 5px;
     width: 60px;
     height: 60px;
 }
+
 .user-name-timer{
-    
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
- 
+.user-name{
+    color: hsl(219, 12%, 42%);
+}
+#user-name-1:hover{
+    color: hsl(224, 21%, 14%);  
+}
+#user-name-2:hover{
+    color: hsl(224, 21%, 14%);  
+}
+#user-name-3:hover{
+    color: hsl(224, 21%, 14%);  
+} #user-name-4:hover{
+    color: hsl(224, 21%, 14%);  
+}
+#user-name-5:hover{
+    color: hsl(224, 21%, 14%);  
+}
+#user-name-6:hover{
+    color: hsl(224, 21%, 14%);  
+}
+#user-name-7:hover{
+    color: hsl(224, 21%, 14%);  
+}
+
 .p-mark{
     
     width: 400px;
@@ -104,16 +157,24 @@ body{
 color: hsl(205, 33%, 90%);
 }
 
-.span-chess{
+#span-chess{
     font-weight: 800;
 color: hsl(219, 12%, 42%)
 }
-.other-span{
+
+#span-chess:hover{
+color: hsl(224, 21%, 14%);
+
+}
+#other-span{
     font-weight: 700;
     color: hsl(219, 12%, 42%) ;
 }
-
+#other-span:hover{
+    color: hsl(224, 21%, 14%);
+}
 /*Particular styles*/
+
 #card-4{ 
 display: flex;
 flex-direction: column;
@@ -125,12 +186,17 @@ flex-direction: column;
 }
 
 .message{
-    max-width: 500px;
+    max-width: 545px;
     margin: 10px;
     padding: 15px;
     border: solid 2px hsl(205, 33%, 90%);
+    display: flex;
+    border-radius: 10px;
+    
 }
-
+#message:hover{
+    background-color: hsl(205, 33%, 90%);
+}
 #posted-picture{
     max-width: 60px;
     max-width: 60px;
